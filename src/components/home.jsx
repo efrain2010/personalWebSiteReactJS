@@ -9,10 +9,10 @@ export default class Home extends Component {
                         <div className="overlay"></div>
                         <div className="container">
                             <div className="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-                                <div className="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+                                <div className="one-third js-fullheight order-md-last img" style={{ backgroundImage: 'url(images/bg_1.png)' }}>
                                     <div className="overlay"></div>
                                 </div>
-                                <div className="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                                <div className="one-forth d-flex  align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
                                     <div className="text">
                                         <span className="subheading">Hello!</span>
                                         <h1 className="mb-4 mt-3">I'm <span>Clark Thompson</span></h1>
@@ -28,10 +28,10 @@ export default class Home extends Component {
                         <div className="overlay"></div>
                         <div className="container">
                             <div className="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-                                <div className="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_2.png);">
+                                <div className="one-third js-fullheight order-md-last img" style={{ backgroundImage: 'url(images/bg_2.png)' }}>
                                     <div className="overlay"></div>
                                 </div>
-                                <div className="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                                <div className="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
                                     <div className="text">
                                         <span className="subheading">Hello!</span>
                                         <h1 className="mb-4 mt-3">I'm a <span>web designer</span> based in London</h1>

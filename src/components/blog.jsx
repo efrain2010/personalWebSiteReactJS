@@ -15,7 +15,7 @@ export default class Blog extends Component {
                     <div className="row d-flex">
                         <div className="col-md-4 d-flex ftco-animate">
                             <div className="blog-entry justify-content-end">
-                                <a href="single.html" className="block-20" style="background-image: url('images/image_1.jpg');"></a>
+                                <a href="#" className="block-20" style={{ backgroundImage: 'url(images/image_1.jpg)' }}></a>
                                 <div className="text mt-3 float-right d-block">
                                     <div className="d-flex align-items-center mb-3 meta">
                                         <p className="mb-0">
@@ -24,14 +24,14 @@ export default class Blog extends Component {
                                             <a href="#" className="meta-chat"><span className="icon-chat"></span> 3</a>
                                         </p>
                                     </div>
-                                    <h3 className="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                                    <h3 className="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
                                     <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4 d-flex ftco-animate">
                             <div className="blog-entry justify-content-end">
-                                <a href="single.html" className="block-20" style="background-image: url('images/image_2.jpg');"></a>
+                                <a href="#" className="block-20" style={{ backgroundImage: 'url(images/image_2.jpg)' }}></a>
                                 <div className="text mt-3 float-right d-block">
                                     <div className="d-flex align-items-center mb-3 meta">
                                         <p className="mb-0">
@@ -40,14 +40,14 @@ export default class Blog extends Component {
                                             <a href="#" className="meta-chat"><span className="icon-chat"></span> 3</a>
                                         </p>
                                     </div>
-                                    <h3 className="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                                    <h3 className="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
                                     <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4 d-flex ftco-animate">
                             <div className="blog-entry">
-                                <a href="single.html" className="block-20" style="background-image: url('images/image_3.jpg');"></a>
+                                <a href="#" className="block-20" style={{ backgroundImage: 'url(images/image_3.jpg)' }}></a>
                                 <div className="text mt-3 float-right d-block">
                                     <div className="d-flex align-items-center mb-3 meta">
                                         <p className="mb-0">
@@ -56,7 +56,7 @@ export default class Blog extends Component {
                                             <a href="#" className="meta-chat"><span className="icon-chat"></span> 3</a>
                                         </p>
                                     </div>
-                                    <h3 className="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+                                    <h3 className="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
                                     <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                                 </div>
                             </div>

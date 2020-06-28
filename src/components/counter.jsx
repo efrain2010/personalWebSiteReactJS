@@ -9,7 +9,7 @@ export default class Counter extends Component {
                         <div className="col-md d-flex justify-content-center counter-wrap ftco-animate">
                             <div className="block-18">
                                 <div className="text">
-                                    <strong className="number" data-number="100">0</strong>
+                                    <strong className="number" data-number="{100}">0</strong>
                                     <span>Awards</span>
                                 </div>
                             </div>
@@ -17,7 +17,7 @@ export default class Counter extends Component {
                         <div className="col-md d-flex justify-content-center counter-wrap ftco-animate">
                             <div className="block-18">
                                 <div className="text">
-                                    <strong className="number" data-number="1200">0</strong>
+                                    <strong className="number" data-number="{1200}">0</strong>
                                     <span>Complete Projects</span>
                                 </div>
                             </div>
@@ -25,7 +25,7 @@ export default class Counter extends Component {
                         <div className="col-md d-flex justify-content-center counter-wrap ftco-animate">
                             <div className="block-18">
                                 <div className="text">
-                                    <strong className="number" data-number="1200">0</strong>
+                                    <strong className="number" data-number="{1200}">0</strong>
                                     <span>Happy Customers</span>
                                 </div>
                             </div>
@@ -33,7 +33,7 @@ export default class Counter extends Component {
                         <div className="col-md d-flex justify-content-center counter-wrap ftco-animate">
                             <div className="block-18">
                                 <div className="text">
-                                    <strong className="number" data-number="500">0</strong>
+                                    <strong className="number" data-number="{500}">0</strong>
                                     <span>Cups of coffee</span>
                                 </div>
                             </div>

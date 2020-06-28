@@ -75,7 +75,7 @@ export default class Contact extends Component {
                         </div>
 
                         <div className="col-md-6 d-flex">
-                            <div className="img" style="background-image: url(images/about.jpg);"></div>
+                            <div className="img" style={{ backgroundImage: 'url(images/about.jpg)' }}></div>
                         </div>
                     </div>
                 </div>

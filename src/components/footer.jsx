@@ -11,9 +11,8 @@ export default class Footer extends Component {
                             <h2 className="ftco-heading-2">About</h2>
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                             <ul className="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                                <li className="ftco-animate"><a href="#"><span className="icon-twitter"></span></a></li>
-                                <li className="ftco-animate"><a href="#"><span className="icon-facebook"></span></a></li>
-                                <li className="ftco-animate"><a href="#"><span className="icon-instagram"></span></a></li>
+                                <li className="ftco-animate"><a href="https://www.facebook.com/3fRaV" target="_blank" rel="noopener noreferrer"><span className="icon-facebook"></span></a></li>
+                                <li className="ftco-animate"><a href="https://www.instagram.com/efraintenso/" target="_blank" rel="noopener noreferrer"><span className="icon-instagram"></span></a></li>
                             </ul>
                             </div>
                         </div>

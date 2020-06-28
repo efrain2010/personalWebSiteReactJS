@@ -14,7 +14,7 @@ export default class Projects extends Component {
                     </div>
                     <div className="row">
                         <div className="col-md-4">
-                            <div className="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-4.jpg);">
+                            <div className="project img ftco-animate d-flex justify-content-center align-items-center" style={{ backgroundImage: 'url(images/project-4.jpg)' }}>
                                 <div className="overlay"></div>
                                 <div className="text text-center p-4">
                                     <h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -23,7 +23,7 @@ export default class Projects extends Component {
                             </div>
                         </div>
                         <div className="col-md-8">
-                            <div className="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-5.jpg);">
+                            <div className="project img ftco-animate d-flex justify-content-center align-items-center" style={{ backgroundImage: 'url(images/project-5.jpg)' }}>
                                 <div className="overlay"></div>
                                 <div className="text text-center p-4">
                                     <h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -33,7 +33,7 @@ export default class Projects extends Component {
                         </div>
 
                         <div className="col-md-8">
-                            <div className="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-1.jpg);">
+                            <div className="project img ftco-animate d-flex justify-content-center align-items-center" style={{ backgroundImage: 'url(images/project-1.jpg)' }}>
                                 <div className="overlay"></div>
                                 <div className="text text-center p-4">
                                     <h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -41,7 +41,7 @@ export default class Projects extends Component {
                                 </div>
                             </div>
 
-                            <div className="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-6.jpg);">
+                            <div className="project img ftco-animate d-flex justify-content-center align-items-center" style={{ backgroundImage: 'url(images/project-6.jpg)' }}>
                                 <div className="overlay"></div>
                                 <div className="text text-center p-4">
                                     <h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -52,7 +52,7 @@ export default class Projects extends Component {
                         <div className="col-md-4">
                             <div className="row">
                                 <div className="col-md-12">
-                                    <div className="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-2.jpg);">
+                                    <div className="project img ftco-animate d-flex justify-content-center align-items-center" style={{ backgroundImage: 'url(images/project-2.jpg)' }}>
                                         <div className="overlay"></div>
                                         <div className="text text-center p-4">
                                             <h3><a href="#">Branding &amp; Illustration Design</a></h3>
@@ -61,7 +61,7 @@ export default class Projects extends Component {
                                     </div>
                                 </div>
                                 <div className="col-md-12">
-                                    <div className="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-3.jpg);">
+                                    <div className="project img ftco-animate d-flex justify-content-center align-items-center" style={{ backgroundImage: 'url(images/project-3.jpg)' }}>
                                         <div className="overlay"></div>
                                         <div className="text text-center p-4">
                                             <h3><a href="#">Branding &amp; Illustration Design</a></h3>
