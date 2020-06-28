@@ -1,4 +1,4 @@
-# Professional template tutorial of DEV.TO
+# Professional template tutorial of DEV.TO  
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
