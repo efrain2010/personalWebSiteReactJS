@@ -3,74 +3,74 @@ import React, { Component }from 'react';
 export default class Services extends Component{
     render() {
         return (
-            <section class="ftco-section" id="services-section">
-                <div class="container">
-                    <div class="row justify-content-center py-5 mt-5">
-                        <div class="col-md-12 heading-section text-center ftco-animate">
-                            <h1 class="big big-2">Services</h1>
-                            <h2 class="mb-4">Services</h2>
+            <section className="ftco-section" id="services-section">
+                <div className="container">
+                    <div className="row justify-content-center py-5 mt-5">
+                        <div className="col-md-12 heading-section text-center ftco-animate">
+                            <h1 className="big big-2">Services</h1>
+                            <h2 className="mb-4">Services</h2>
                             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 text-center d-flex ftco-animate">
-                            <a href="#" class="services-1">
-                                <span class="icon">
-                                    <i class="flaticon-analysis"></i>
+                    <div className="row">
+                        <div className="col-md-4 text-center d-flex ftco-animate">
+                            <a href="#" className="services-1">
+                                <span className="icon">
+                                    <i className="flaticon-analysis"></i>
                                 </span>
-                                <div class="desc">
-                                    <h3 class="mb-5">Web Design</h3>
+                                <div className="desc">
+                                    <h3 className="mb-5">Web Design</h3>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 text-center d-flex ftco-animate">
-                            <a href="#" class="services-1">
-                                <span class="icon">
-                                    <i class="flaticon-flasks"></i>
+                        <div className="col-md-4 text-center d-flex ftco-animate">
+                            <a href="#" className="services-1">
+                                <span className="icon">
+                                    <i className="flaticon-flasks"></i>
                                 </span>
-                                <div class="desc">
-                                    <h3 class="mb-5">Phtography</h3>
+                                <div className="desc">
+                                    <h3 className="mb-5">Phtography</h3>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 text-center d-flex ftco-animate">
-                            <a href="#" class="services-1">
-                                <span class="icon">
-                                    <i class="flaticon-ideas"></i>
+                        <div className="col-md-4 text-center d-flex ftco-animate">
+                            <a href="#" className="services-1">
+                                <span className="icon">
+                                    <i className="flaticon-ideas"></i>
                                 </span>
-                                <div class="desc">
-                                    <h3 class="mb-5">Web Developer</h3>
+                                <div className="desc">
+                                    <h3 className="mb-5">Web Developer</h3>
                                 </div>
                             </a>
                         </div>
 
-                        <div class="col-md-4 text-center d-flex ftco-animate">
-                            <a href="#" class="services-1">
-                                <span class="icon">
-                                    <i class="flaticon-analysis"></i>
+                        <div className="col-md-4 text-center d-flex ftco-animate">
+                            <a href="#" className="services-1">
+                                <span className="icon">
+                                    <i className="flaticon-analysis"></i>
                                 </span>
-                                <div class="desc">
-                                    <h3 class="mb-5">App Developing</h3>
+                                <div className="desc">
+                                    <h3 className="mb-5">App Developing</h3>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 text-center d-flex ftco-animate">
-                            <a href="#" class="services-1">
-                                <span class="icon">
-                                    <i class="flaticon-flasks"></i>
+                        <div className="col-md-4 text-center d-flex ftco-animate">
+                            <a href="#" className="services-1">
+                                <span className="icon">
+                                    <i className="flaticon-flasks"></i>
                                 </span>
-                                <div class="desc">
-                                    <h3 class="mb-5">Branding</h3>
+                                <div className="desc">
+                                    <h3 className="mb-5">Branding</h3>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-4 text-center d-flex ftco-animate">
-                            <a href="#" class="services-1">
-                                <span class="icon">
-                                    <i class="flaticon-ideas"></i>
+                        <div className="col-md-4 text-center d-flex ftco-animate">
+                            <a href="#" className="services-1">
+                                <span className="icon">
+                                    <i className="flaticon-ideas"></i>
                                 </span>
-                                <div class="desc">
-                                    <h3 class="mb-5">Product Strategy</h3>
+                                <div className="desc">
+                                    <h3 className="mb-5">Product Strategy</h3>
                                 </div>
                             </a>
                         </div>
