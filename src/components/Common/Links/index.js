@@ -1,52 +1,41 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-import Grid from '@material-ui/core/Grid';
+import { NavLink } from 'react-router-dom';
 
 import useStyles from './styles';
 
 const Links = props => {
 
-  const classes = useStyles();
-
   const spacing = ( props.space === undefined ) ? 2 : props.space;
 
-  return <nav class="nav-menu">
-    <Grid 
-      className={ classes.nav } 
-      item 
-      xs 
-      container 
-      direction={ props.alingment } 
-      spacing={ spacing }
-      justify="center"
-      alignItems="center"
-    >
-      <Grid item xs>
-        <Link to="/">Home</Link>
-      </Grid>
-      <Grid item xs>
-        <Link to="/about">About</Link>
-      </Grid>
-      <Grid item xs>
-        <Link to="/resume">Resume</Link>
-      </Grid>
-      <Grid item xs>
-        <Link to="/services">Services</Link>
-      </Grid>
-      <Grid item xs>
-        <Link to="/skills">Skills</Link>
-      </Grid>
-      <Grid item xs>
-        <Link to="/projects">Projects</Link>
-      </Grid>
-      <Grid item xs>
-        <Link to="/blog">My Blog</Link>
-      </Grid>
-      <Grid item xs>
-        <Link to="/contact">Contact</Link>
-      </Grid>
-    </Grid>
+  const classes = useStyles();
+
+  return <nav class={ classes.root }>
+    <ul>
+      <li>
+        <NavLink exact to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink exact to="/about">About</NavLink>
+      </li>
+      <li>
+        <NavLink exact to="/resume">Resume</NavLink>
+      </li>
+      <li>
+        <NavLink exact to="/services">Services</NavLink>
+      </li>
+      <li>
+        <NavLink exact to="/skills">Skills</NavLink>
+      </li>
+      <li>
+        <NavLink exact to="/projects">Projects</NavLink>
+      </li>
+      <li>
+        <NavLink exact to="/blog">My Blog</NavLink>
+      </li>
+      <li>
+        <NavLink exact to="/contact">Contact</NavLink>
+      </li>
+    </ul>
   </nav>;
 }
 

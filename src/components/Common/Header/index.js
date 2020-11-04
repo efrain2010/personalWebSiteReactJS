@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -7,7 +6,7 @@ import Container from '@material-ui/core/Container';
 import Links from '../Links';
 
 import useStyles from './styles';
-import logo from '../../../assets/logo.png';
+import logo from '../../../assets/images/logo.png';
 
 const Header = () => {
 
@@ -17,8 +16,11 @@ const Header = () => {
 		<Container maxWidth="lg">
 			<Grid container spacing={ 3 }>
 				<Grid item xs={ 3 }>
-					<a href="/">
-						<img className={ classes.image } src={ logo } />
+					<a href="/" className={ classes.logo }>
+						<span>
+							<img src={ logo } /> 
+							<h2>Efraín Villanueva</h2>
+						</span>
 					</a>
 				</Grid>
 				<Grid item xs></Grid>
