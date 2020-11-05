@@ -10,6 +10,17 @@ const darkTheme = createMuiTheme({
       main: '#EC2B3D',
     },
   },
+  typography: {
+    h1: {
+      fontSize: '2.5rem'
+    },
+    h2: {
+      fontSize: '2.5rem'
+    },
+    h3: {
+      fontSize: '2rem'
+    }
+  }
 });
 
 export {

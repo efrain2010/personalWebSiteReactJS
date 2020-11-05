@@ -2,8 +2,6 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 
-import Links from '../Links';
-
 import useStyles from './styles';
 
 import logo from '../../../assets/images/logo.png';

@@ -1,12 +1,13 @@
 import React from 'react';
-import { darkTheme } from './styles';
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { BrowserRouter } from 'react-router-dom';
 
 import Routes from '../Routes';
 import Header from '../Common/Header';
 import Footer from '../Common/Footer';
+
+import { darkTheme } from './styles';
 
 const Layout = () => (
   <ThemeProvider theme={ darkTheme }>
