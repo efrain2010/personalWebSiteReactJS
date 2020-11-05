@@ -1,14 +1,15 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
 import Container from '@material-ui/core/Container';
+
 import Links from '../Links';
 
 import useStyles from './styles';
 import logo from '../../../assets/images/logo.png';
 
-const Header = () => {
+const Header = props => {
 
 	const classes = useStyles();
 
@@ -16,21 +17,21 @@ const Header = () => {
 		<Container maxWidth="lg">
 			<Grid container spacing={ 3 }>
 				<Grid item xs={ 3 }>
-					<a href="/" className={ classes.logo }>
+					<NavLink
+						className={ classes.logo }
+						exact
+						to="/"
+					>
 						<span>
 							<img src={ logo } alt="Logo" /> 
-							<h2>Efraín Villanueva</h2>
 						</span>
-					</a>
+					</NavLink>
 				</Grid>
 				<Grid item xs></Grid>
-				<Grid item xs={ 7 }>
-					<Hidden mdDown>
-						<button>Menu</button>
-					</Hidden>
-					<Links className={ classes.nav }
-						alingment="row"
-						space={ 1 }
+				<Grid item xs={ 1 }>
+					<Links 
+						className={ classes.nav }
+						type="hidden"
 					/>
 				</Grid>
 			</Grid>

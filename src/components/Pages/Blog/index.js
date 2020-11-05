@@ -28,7 +28,6 @@ const Blog = () => {
 
 			setEntriesState(tempEntries);
 			setLoadingState(false);
-			console.log("triggered")
 
 		}, 3000);
 

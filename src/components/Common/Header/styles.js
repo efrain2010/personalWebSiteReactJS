@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: theme.spacing.unit,
+    paddingTop: theme.spacing(),
     '& nav':{
       paddingTop: 24,
     },
@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     '& h2': {
       fontSize: 18,
       display: 'inline-block',
-      marginLeft: theme.spacing.unit
+      marginLeft: theme.spacing()
     },
       '& img': {
       maxWidth: 30

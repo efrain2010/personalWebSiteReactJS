@@ -15,12 +15,8 @@ const Footer = () => {
 	return <footer className={ classes.root }>
 		<Container maxWidth="lg">
 			<Grid container>
-				<Grid item xs="7">
+				<Grid item xs={ 7 }>
 					<img className={ classes.logo } src={ logo } alt="Logo" />
-					<Links
-						alingment="row"
-						space={ 1 }
-					/>
 				</Grid>
 				<Grid item xs>
 					<h2 style={{margin: 0}}>Want to contact me?</h2>

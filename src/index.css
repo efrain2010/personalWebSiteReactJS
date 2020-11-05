@@ -18,6 +18,11 @@ a {
   text-decoration: none;
 }
 
+nav a.active {
+  color: #ec2b3d;
+  text-decoration: none;
+}
+
 .text-align {
   text-align: center;
 }
