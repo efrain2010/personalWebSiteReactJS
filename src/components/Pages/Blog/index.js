@@ -1,67 +1,102 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Blog = () => (
-    <section className="ftco-section" id="blog-section">
-        <div className="container">
-            <div className="row justify-content-center mb-5 pb-5">
-                <div className="col-md-7 heading-section text-center ftco-animate">
-                    <h1 className="big big-2">Blog</h1>
-                    <h2 className="mb-4">Our Blog</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-                </div>
-            </div>
-            <div className="row d-flex">
-                <div className="col-md-4 d-flex ftco-animate">
-                    <div className="blog-entry justify-content-end">
-                        <a href="#" className="block-20" style={{ backgroundImage: 'url(images/image_1.jpg)' }}></a>
-                        <div className="text mt-3 float-right d-block">
-                            <div className="d-flex align-items-center mb-3 meta">
-                                <p className="mb-0">
-                                    <span className="mr-2">June 21, 2019</span>
-                                    <a href="#" className="mr-2">Admin</a>
-                                    <a href="#" className="meta-chat"><span className="icon-chat"></span> 3</a>
-                                </p>
-                            </div>
-                            <h3 className="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4 d-flex ftco-animate">
-                    <div className="blog-entry justify-content-end">
-                        <a href="#" className="block-20" style={{ backgroundImage: 'url(images/image_2.jpg)' }}></a>
-                        <div className="text mt-3 float-right d-block">
-                            <div className="d-flex align-items-center mb-3 meta">
-                                <p className="mb-0">
-                                    <span className="mr-2">June 21, 2019</span>
-                                    <a href="#" className="mr-2">Admin</a>
-                                    <a href="#" className="meta-chat"><span className="icon-chat"></span> 3</a>
-                                </p>
-                            </div>
-                            <h3 className="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-4 d-flex ftco-animate">
-                    <div className="blog-entry">
-                        <a href="#" className="block-20" style={{ backgroundImage: 'url(images/image_3.jpg)' }}></a>
-                        <div className="text mt-3 float-right d-block">
-                            <div className="d-flex align-items-center mb-3 meta">
-                                <p className="mb-0">
-                                    <span className="mr-2">June 21, 2019</span>
-                                    <a href="#" className="mr-2">Admin</a>
-                                    <a href="#" className="meta-chat"><span className="icon-chat"></span> 3</a>
-                                </p>
-                            </div>
-                            <h3 className="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-);
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import Skeleton from '@material-ui/lab/Skeleton';
+
+import hero from '../../../assets/images/code-background.jpg';
+import useStyles from './styles';
+
+const Blog = () => {
+	
+	const [ loadingState, setLoadingState ] = useState(true);
+	const [ entriesState, setEntriesState ] = useState([...Array(7)].map(x => 0));
+
+	const classes = useStyles();
+
+	useEffect(() => {
+
+		setTimeout(() => {
+
+			const tempEntries = [...Array(19)].map((x, index) => {
+				return {
+					title: `Example of a title ${index + 1}`,
+					author: `Example of an author ${index + 1}`,
+					image: `url(${hero})`,
+				}
+			});
+
+			setEntriesState(tempEntries);
+			setLoadingState(false);
+			console.log("triggered")
+
+		}, 3000);
+
+	}, []);
+	
+	const EntriesTemplate = () => {
+		
+		let cont = 0;
+		const entries = entriesState;
+		
+		return entries.map(entry => {
+
+			let cols = 12;
+
+			if ( cont === 0 ) {
+				cols = 12;
+			} else if ( cont < 2 || cont > 5 ) {
+				cols = 6;
+			} else {
+				cols = 3;
+			}
+			
+			if ( cont === 7 ) {
+				cont = 1;
+			}
+			
+			cont += 1;
+			
+			return (
+				<Grid item xs={ cols }>
+					{
+						loadingState
+						? (
+							<Skeleton
+								animation="wave"
+								variant="rect"
+								width="100%"
+								height={ 280 }
+							/>
+						) : (
+							<div 
+								className="entry"
+								style={{
+									backgroundImage: entry.image
+								}}
+							>
+								<h2>{ entry.title }</h2>
+								<h3>{ entry.author }</h3>
+							</div>
+						)
+					}
+				</Grid>
+			)
+		});
+
+	};
+	
+	return <section className={ classes.root }>
+			<Container maxWidth="lg">
+				<Grid container spacing={ 2 }>
+					<Grid item xs>
+						<h2>Blog</h2>
+					</Grid>
+					<EntriesTemplate />
+				</Grid>
+			</Container>
+		</section>;
+
+};
 
 export default Blog;

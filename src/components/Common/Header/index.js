@@ -18,7 +18,7 @@ const Header = () => {
 				<Grid item xs={ 3 }>
 					<a href="/" className={ classes.logo }>
 						<span>
-							<img src={ logo } /> 
+							<img src={ logo } alt="Logo" /> 
 							<h2>Efraín Villanueva</h2>
 						</span>
 					</a>

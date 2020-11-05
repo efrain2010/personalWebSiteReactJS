@@ -9,7 +9,6 @@ const useStyles = makeStyles((theme) => ({
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
-      height: 250
     },
   },
 }));

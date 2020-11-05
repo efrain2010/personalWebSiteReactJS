@@ -1,11 +1,11 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    paddingTop: 30
-  },
-  logo: {
-    maxWidth: 30
+  root: { 
+    '& .entry': {
+      height: 180,
+      padding: theme.spacing.unit
+    }
   },
 }));
 

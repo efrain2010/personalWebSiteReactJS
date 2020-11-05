@@ -12,11 +12,11 @@ const Footer = () => {
 
 	const classes = useStyles();
 
-	return <footer>
-		<Container maxWidth="md">
+	return <footer className={ classes.root }>
+		<Container maxWidth="lg">
 			<Grid container>
 				<Grid item xs="7">
-					<img className={ classes.logo } src={ logo } />
+					<img className={ classes.logo } src={ logo } alt="Logo" />
 					<Links
 						alingment="row"
 						space={ 1 }

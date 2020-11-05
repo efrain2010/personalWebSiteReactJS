@@ -3,9 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import useStyles from './styles';
 
-const Links = props => {
-
-  const spacing = ( props.space === undefined ) ? 2 : props.space;
+const Links = () => {
 
   const classes = useStyles();
 
