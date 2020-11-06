@@ -32,14 +32,14 @@ const Links = props => {
         <li>
           <NavLink
             exact
-            to="/skills"
-          >Skills</NavLink>
+            to="/projects"
+          >Projects</NavLink>
         </li>
         <li>
           <NavLink
             exact
-            to="/projects"
-          >Projects</NavLink>
+            to="/contact"
+          >Contact</NavLink>
         </li>
         <li>
           <NavLink
@@ -47,12 +47,6 @@ const Links = props => {
             to="/blog" 
           >
             Blog</NavLink>
-        </li>
-        <li>
-          <NavLink
-            exact
-            to="/contact"
-          >Contact</NavLink>
         </li>
       </ul>
     </nav>

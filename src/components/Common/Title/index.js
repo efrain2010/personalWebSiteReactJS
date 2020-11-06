@@ -2,31 +2,50 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
 import useStyles from './styles';
 
 const Title = props => {
 
-  const classes = useStyles();
+  const tempClasses = useStyles();
 
-  return (
+  const classes = [tempClasses.root];
+  
+  
+  let align = null;
+  if (props.align === "left") {
+    classes.push(tempClasses.left);
+    align = "flex-start";
+  } else if (props.align === "center") {
+    classes.push(tempClasses.center);
+    align = "center";
+  } else if (props.align === "right") {
+    classes.push(tempClasses.right);
+    align = "flex-end";
+  }
+
+  return <Grid 
+    className={ classes.join(" ") }
+    container
+    justify={ align }
+  >
     <Typography
-      className={ classes.root }
-      variant={ props.type }
-      gutterBottom={ props.gutter }
+      variant='h2'
       >
       { props.children }
+      <span className="underline"></span>
     </Typography>
-  );
+  </Grid>;
 }
 
 Title.propTypes = {
-  type: PropTypes.string,
-  gutter: PropTypes.bool
+  align: PropTypes.string
 }
 
 Title.defaultProps = {
-  type: 'h2',
+  align: 'right'
 }
+
 
 export default Title;

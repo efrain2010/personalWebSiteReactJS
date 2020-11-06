@@ -2,12 +2,15 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   '@global': {
-    body: {
-      backgroundColor: '#575757'
-    },
     a: {
       color: '#FFFFFF',
       textDecoration: 'none',
+    },
+    section: {
+      position: 'relative',
+    },
+    '.text-red-v': {
+      color: '#EC2B3D',
     },
     'nav a.active': {
       color: '#EC2B3D',
