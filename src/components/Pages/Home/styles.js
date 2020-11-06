@@ -1,30 +1,25 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-import efraAdventurerImg from '../../../assets/images/efra-the-adventurer.jpg';
-
 const useStyles = makeStyles((theme) => ({
   hero: {
-    backgroundImage: `url(${efraAdventurerImg})`,
+    backgroundColor: '#303030',
     backgroundPosition: 'center 60%',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     position: 'relative',
-    '&::before': {
-      backgroundColor: 'rgba(0, 0, 0, 0.8)',
-      content: '""',
-      display: 'block',
-      height: '100%',
-      position: 'absolute',
-      width: '100%',
-    },
     '& > div': {
-      paddingBottom: theme.spacing(20),
-      paddingTop: theme.spacing(20),
+      height: '100vh',
       position: 'relative',
     },
     '& strong': {
       color: theme.palette.secondary.main
     }
+  },
+  fitToScreen: {
+    minHeight: '100vh',
+  },
+  letsTalkBtn: {
+    borderWidth: 3,
   },
   aboutMe: {
     padding: theme.spacing(3)

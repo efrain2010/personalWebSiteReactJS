@@ -1,13 +1,12 @@
 import React from 'react';
-
 import HeroSection from './HeroSection';
-import IntroductionSection from './IntroductionSection';
+import AboutSection from './AboutSection';
 
 const Home = () => {
 
 	return <React.Fragment>
 		<HeroSection />
-		<IntroductionSection />
+		<AboutSection />
 	</React.Fragment>;
 
 }

@@ -8,8 +8,7 @@ import Contact from '../Pages/Contact';
 import Counter from '../Common/Counter';
 import Hireme from '../Pages/Hireme';
 import Projects from '../Pages/Projects';
-import Resume from '../Pages/Resume';
-import Services from '../Pages/Services';
+import Experience from '../Pages/Experience';
 import Skills from '../Pages/Skills';
 
 class Routes extends Component {
@@ -17,8 +16,7 @@ class Routes extends Component {
     return <React.Fragment>
       <Route path="/" exact component={ Home } />
       <Route path="/about" exact component={ About } />
-      <Route path="/resume" exact component={ Resume } />
-      <Route path="/services" exact component={ Services } />
+      <Route path="/experience" exact component={ Experience } />
       <Route path="/skills" exact component={ Skills } />
       <Route path="/projects" exact component={ Projects } />
       <Route path="/blog" exact component={ Blog } />

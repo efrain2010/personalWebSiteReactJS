@@ -11,7 +11,7 @@ const Footer = () => {
 	const classes = useStyles();
 
 	return <footer className={ classes.root }>
-		<Container maxWidth="lg">
+		<Container maxWidth={ false }>
 			<Grid container>
 				<Grid item xs={ 7 }>
 					<img className={ classes.logo } src={ logo } alt="Logo" />

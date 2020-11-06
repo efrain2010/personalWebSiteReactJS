@@ -2,10 +2,15 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingTop: theme.spacing(),
-    '& nav':{
-      paddingTop: 24,
-    },
+    paddingBottom: theme.spacing(1),
+    paddingTop: theme.spacing(1),
+    position: 'fixed',
+    width: '100%',
+    zIndex: 9,
+  },
+  scrolled: {
+    backgroundColor: '#303030',
+    borderBottom: `1px solid ${theme.palette.primary.main}`,
   },
   logo: {
     '& h2': {
@@ -13,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
       display: 'inline-block',
       marginLeft: theme.spacing()
     },
-      '& img': {
-      maxWidth: 30
+    '& img': {
+      maxWidth: 25
     },
   },
   nav: {

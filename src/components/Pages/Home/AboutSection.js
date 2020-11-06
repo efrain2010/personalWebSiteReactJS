@@ -3,27 +3,26 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
+import Title from  '../../Common/Title';
+
 import useStyles from './styles';
 
-const IntroductionSection = () => {
+const AboutSection = () => {
 
 	const classes = useStyles();
 
 	return <section className={ classes.aboutMe }>
 		<Container maxWidth="md">
+      <Grid container>
+        <Title gutter={ true }>About Me</Title>
+      </Grid>
       <Grid
         container
         direction="row"
+        alignItems="center"
         justify="center"
       >
-        <Grid item xs={ 8 }>
-          <Typography
-            align="center"
-            variant="h2"
-            gutterBottom={ true }
-          >
-            About Me
-          </Typography>
+        <Grid item xs={ 8 }>          
           <Typography
             align="center"
             variant="h5"
@@ -40,4 +39,4 @@ const IntroductionSection = () => {
 
 }
 
-export default IntroductionSection;
+export default AboutSection;
