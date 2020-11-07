@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: '50%',
       height: 280,
       overflow: 'hidden',
+      margin: '0 auto',
       position: 'relative',
       width: 280,
       '&::before': {
@@ -125,7 +126,22 @@ const useStyles = makeStyles((theme) => ({
         height: 280,
         width: 280,
       }
-    }
+    },
+    '& .skills': {
+      '& svg': {
+        display: 'inline-block',
+        marginRight: 5,
+        verticalAlign: 'middle',
+      },
+      '& p:hover svg': {
+        color: theme.palette.secondary.main,
+      },
+    },
+  },
+  workSection: {
+    '& .logoBtn img': {
+      width: 80,
+    },
   },
 }));
 
