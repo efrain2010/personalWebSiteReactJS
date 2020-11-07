@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 
 import Title from  '../../Common/Title';
 
+import efraWorkingImg from '../../../assets/images/efra-working.jpg';
 import useStyles from './styles';
 
 const AboutSection = () => {
@@ -20,7 +21,7 @@ const AboutSection = () => {
       alignItems="center"
       justify="center"
     >
-      <Grid item xs={ 8 }>          
+      <Grid item xs={ 6 }>
         <Typography
           align="center"
           variant="h5"
@@ -30,7 +31,15 @@ const AboutSection = () => {
           <br/>
           ... write more
         </Typography>
-        </Grid>
+      </Grid>
+      <Grid item xs={ 6 }>
+        <figure className="photo">
+          <div className="innerFrame">
+            <img src={ efraWorkingImg } alt="Efra morning work" />
+          </div>
+        </figure>
+      </Grid>
+
     </Grid>
 	</section>;
 
