@@ -23,9 +23,8 @@ const AboutSection = () => {
     >
       <Grid item xs={ 6 }>
         <Typography
-          align="center"
-          variant="h5"
-          variantMapping={{h5: 'p'}}
+          variant="subtitle1"
+          variantMapping={{"subtitle1": "p"}}
         >
           I'm a <strong>Fullstack Web Developer</strong> based in Scotland with 6 years of professional experience. I'm interested in different kind of projects like mobile, desktop and game development, but mainly in web development.
           <br/>

@@ -2,6 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    backgroundColor: '#303030',
     paddingBottom: theme.spacing(1),
     paddingTop: theme.spacing(1),
     position: 'fixed',
@@ -9,8 +10,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 9,
   },
   scrolled: {
-    backgroundColor: '#303030',
-    borderBottom: `1px solid ${theme.palette.primary.main}`,
+    boxShadow: '6px 0 11px -2px #000000',
   },
   logo: {
     '& h2': {
