@@ -142,6 +142,10 @@ const useStyles = makeStyles((theme) => ({
     '& .logoBtn img': {
       width: 80,
     },
+    '& .jobsHeader': {
+      backgroundColor: '#303030',
+      boxShadow: 'none',
+    }
   },
 }));
 

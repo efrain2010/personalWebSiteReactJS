@@ -13,6 +13,7 @@ import Box from '@material-ui/core/Box';
 import Title from '../../Common/Title';
 
 import logoImg from '../../../assets/images/logo.png';
+import ggammaLogoImg from '../../../assets/images/ggamma-logo.png';
 import useStyles from './styles';
 
 const TabPanel = props => {
@@ -26,7 +27,7 @@ const TabPanel = props => {
     {...other}
   >
     {value === index && (
-      <Box p={3}>
+      <Box pt={ 3 } pb={ 3 }>
         <Typography>{children}</Typography>
       </Box>
     )}
@@ -71,7 +72,7 @@ const WorkedSection = () => {
       justify="center"
     >
       <div style={{width: '100%'}}>
-        <AppBar position="static" color="default">
+        <AppBar className="jobsHeader" position="static" color="default">
           <Tabs
             value={ value }
             onChange={ handleChange }
@@ -80,10 +81,8 @@ const WorkedSection = () => {
             variant="fullWidth"
             aria-label="full width tabs example"
           >
-            <Tab {...a11yProps(0)}>
-              Item One
-            </Tab>
-            <Tab label="Item Two" {...a11yProps(1)} />
+            <Tab label={ <img style={{ width: 30 }} src={ logoImg } alt="VirtualExp Logo" /> } {...a11yProps(0)} />
+            <Tab label={ <img style={{ width: 90 }} src={ ggammaLogoImg } alt="VirtualExp Logo" /> } {...a11yProps(1)} />
           </Tabs>
         </AppBar>
         <SwipeableViews
@@ -91,11 +90,21 @@ const WorkedSection = () => {
           index={ value }
           onChangeIndex={ handleChangeIndex }
         >
-          <TabPanel value={ value } index={ 0 } dir={ theme.direction }>
-            Item One
+          <TabPanel value={ value } index={ 0 } dir={ theme.direction } p={0}>
+            <Typography
+              variant='subtitle1'
+              variantMapping={{ 'subtitle1': 'h3' }}
+            >
+              Web Developer | Apr 2018 - Sep 2019
+            </Typography>
           </TabPanel>
           <TabPanel value={ value } index={ 1 } dir={ theme.direction }>
-            Item Two
+            <Typography
+              variant='subtitle1'
+              variantMapping={{ 'subtitle1': 'h3' }}
+            >
+              Administration Manager | Apr 2013 - Apr 2018
+            </Typography>
           </TabPanel>
         </SwipeableViews>
       </div>
