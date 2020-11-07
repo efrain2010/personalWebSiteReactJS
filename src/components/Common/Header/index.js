@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, createRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -31,9 +31,38 @@ HideOnScroll.propTypes = {
 const Header = props => {
 
 	const classes = useStyles();
+	const [ headerClasses, setHeaderClasses ] = useState([classes.root]);
+	const [ headerRef ] = useState(createRef());
+
+	useEffect(() => {
+		const logit = () => {
+
+			const tempClasses = [...headerClasses];
+			const headerRect = headerRef.current.getBoundingClientRect();
+			
+			if (window.pageYOffset >= headerRect.height) {
+				if (!tempClasses.includes(classes.scrolled))
+					tempClasses.push(classes.scrolled);
+			} else {
+				const classIndex = tempClasses.indexOf(classes.scrolled);
+				if (classIndex !== -1)
+					tempClasses.splice(classIndex, 1);
+			}
+			setHeaderClasses(tempClasses);
+		};
+
+		const watchScroll = () => {
+      window.addEventListener("scroll", logit);
+    }
+    watchScroll();
+    // Remove listener (like componentWillUnmount)
+    return () => {
+      window.removeEventListener("scroll", logit);
+    };
+	}, [classes, headerClasses, headerRef]);
 
 	return <HideOnScroll {...props}>
-		<header className={ classes.root }>
+		<header className={ headerClasses.join(" ") } ref={ headerRef }>
 			<Container maxWidth={ false }>
 				<Grid container alignItems="center" spacing={ 3 }>
 					<Grid item xs={ 2 }>

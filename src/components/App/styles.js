@@ -16,6 +16,9 @@ const useStyles = makeStyles({
       color: '#EC2B3D',
       textDecoration: 'none',
     },
+    main: {
+      paddingTop: 55,
+    }
   },
 });
 
