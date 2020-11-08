@@ -16,9 +16,11 @@ const AboutSection = () => {
   
   const skillsList = [
     'JavaScript (ES6)',
+    'AngularJS',
+    'React',
     'Django',
     'Laravel',
-    'React',
+    'Java',
   ];
 
 	return <section className={ classes.aboutMe }>
@@ -60,8 +62,8 @@ const AboutSection = () => {
           justify="center"
         >
           {
-            skillsList.map((skill) => {
-              return <Grid item xs={ 6 }>
+            skillsList.map((skill, index) => {
+              return <Grid key={ "home-skill-" + index } item xs={ 6 }>
                 <Typography
                   variant="subtitle1"
                   variantMapping={{"subtitle1": "p"}}

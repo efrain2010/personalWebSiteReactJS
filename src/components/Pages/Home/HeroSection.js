@@ -25,7 +25,7 @@ const HeroSection = () => {
 				<Typography
 					variant="h2"
 				>
-					<strong className="text-red-v">Efrain Villanueva</strong>
+					<strong className="text-red-v">Efraín Villanueva</strong>
 				</Typography>
 				<Typography variant="h1">
 					A Full Stack<br/>

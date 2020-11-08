@@ -3,6 +3,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
+import Grid from '@material-ui/core/Grid';
+
 import Routes from '../Routes';
 import Header from '../Common/Header';
 import Footer from '../Common/Footer';
@@ -15,7 +17,11 @@ const Layout = () => (
     <BrowserRouter>
       <Header></Header>
       <main>
-        <Routes />
+        <Grid container justify="center">
+          <Grid item xs={ 11 }>
+            <Routes />
+          </Grid>
+        </Grid>
       </main>
       <Footer></Footer>
     </BrowserRouter>
