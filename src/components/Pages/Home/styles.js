@@ -18,15 +18,41 @@ const useStyles = makeStyles((theme) => ({
     },
     '& strong': {
       color: theme.palette.secondary.main,
-    }
+    },
   },
   letsTalkBtn: {
     animation: `$btnGlow 3000ms ${theme.transitions.easing.easeInOut}`,
     animationIterationCount: 'infinite',
-    borderWidth: 3,
-    '&:hover': {
-      borderWidth: 3,
-    }
+    borderWidth: 2,
+    padding: '15px 35px',
+    overflow: 'hidden',
+    '& .MuiButton-label': {
+      position: 'relative',
+      '&::before, &::after': {
+        backgroundColor: theme.palette.secondary.main,
+        bottom: 0,
+        content: '""',
+        height: 1,
+        left: '-5%',
+        position: 'absolute',
+        transition: `all 150ms ${theme.transitions.easing.easeInOut}`,
+        width: '110%',
+      },
+      '&::before': {
+        left: '-200%',
+      },
+      '&::after': {
+        left: '200%',
+      },
+    },
+    '&:hover, &:focus': {
+      borderWidth: 2,
+      '& .MuiButton-label': {
+        '&::before, &::after': {
+          left: '-5%',
+        },
+      },
+    },
   },
   "@keyframes btnGlow": {
     "0%": {
