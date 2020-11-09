@@ -54,17 +54,6 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  "@keyframes btnGlow": {
-    "0%": {
-      opacity: 1,
-    },
-    "50%": {
-      opacity: 0.4,
-    },
-    "100%": {
-      opacity: 1,
-    },
-  },
   aboutMe: {
     '& .photo': {
       borderRadius: '50%',
@@ -192,6 +181,81 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.secondary.main,
         transform: 'scale(1.2)'
       }
+    },
+  },
+  projects: {
+    '& .containerCicle': {
+      position: 'relative',
+      zIndex: 1,
+      '& .containerSquare': {
+        '&::before': {
+          content: '""',
+          backgroundColor: 'white',
+          height: '100%',
+          width: '100%',
+          zIndex: 2,
+          transform: 'scale(1.3)',
+          backgroundColor: 'rgb(48 48 48 / 0.6)',
+          position: 'absolute',
+          left: 0,
+          top: 0,
+        },
+        '& img': {
+          height: '100%',
+          width: '100%',
+          objectFit: 'cover',
+          position: 'relative',
+          left: 0,
+          top: 0,
+          transform: 'scale(1.3)',
+        },
+        '& figcaption': {
+          color: theme.palette.secondary.main,
+          fontSize: '1.5rem',
+          fontWeight: 100,
+          textShadow: () => {
+            const blurColor = '10px rgb(236 43 61 / 0.8)';
+            return `2px 2px ${blurColor},
+                  2px -2px ${blurColor},
+                  -2px 2px ${blurColor},
+                  -2px -2px ${blurColor}`;
+          },
+          animation: `$neonSign 1s ${theme.transitions.easing.easeInOut} infinite alternate`,
+          position: 'absolute',
+          left: 0,
+          right: 0,
+          bottom: 0,
+          margin: 'auto',
+          top: 0,
+          textAlign: 'center',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          zIndex: 2,
+        },
+      },
+    },
+  },
+  "@keyframes btnGlow": {
+    "0%": {
+      opacity: 1,
+    },
+    "50%": {
+      opacity: 0.4,
+    },
+    "100%": {
+      opacity: 1,
+    },
+  },
+  "@keyframes neonSign": {
+    "0%": {
+      opacity: 1,
+    },
+    "50%": {
+      opacity: 0.85,
+    },
+    "100%": {
+      opacity: 1,
     },
   },
 }));
