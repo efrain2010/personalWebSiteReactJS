@@ -165,41 +165,33 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   workSection: {
-    '& .logoBtn img': {
-      width: 80,
+    '& .jobsHeader': {
+      backgroundColor: '#303030',
+      boxShadow: 'none',
     },
-    '& .jobsHeaderContainer': {
-      width: '100%',
-      '& .jobsHeader': {
-        backgroundColor: '#303030',
-        boxShadow: 'none',
-        '& .jobsTabs': {
-          '& .MuiTabs-flexContainer > button:nth-child(1) img': {
-            width: 30
-          },
-          '& .MuiTabs-flexContainer > button:nth-child(2) img': {
-            width: 90
-          },
-        },
+    '& .logoBtn:nth-child(1) img': {
+      width: 30
+    },
+    '& .logoBtn:nth-child(2) img': {
+      width: 90
+    },
+    '& .jobs-container': {
+      paddingTop: 20,
+      paddingBottom: 20,
+      '& a': {
+        color: theme.palette.secondary.main,
+        transition: `all 300ms ${theme.transitions.easing.easeIn}`
       },
-      '& .jobs-container': {
-        paddingTop: 20,
-        paddingBottom: 20,
-        '& a': {
-          color: theme.palette.secondary.main,
-          transition: `all 300ms ${theme.transitions.easing.easeIn}`
-        },
-        '& .tasks svg': {
-          display: 'inline-block',
-          verticalAlign: 'middle',
-          marginRight: 5,
-          transition: `all 150ms ${theme.transitions.easing.easeIn}`
-        },
-        '& .tasks p:hover svg': {
-          color: theme.palette.secondary.main,
-          transform: 'scale(1.2)'
-        }
+      '& .tasks svg': {
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        marginRight: 5,
+        transition: `all 150ms ${theme.transitions.easing.easeIn}`
       },
+      '& .tasks p:hover svg': {
+        color: theme.palette.secondary.main,
+        transform: 'scale(1.2)'
+      }
     },
   },
 }));

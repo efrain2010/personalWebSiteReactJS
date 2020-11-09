@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import SwipeableViews from 'react-swipeable-views';
 
-import { useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import TabContext from '@material-ui/lab/TabContext';
+import TabPanel from '@material-ui/lab/TabPanel';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import CodeIcon from '@material-ui/icons/Code';
 
 import Title from '../../Common/Title';
@@ -16,30 +14,6 @@ import Title from '../../Common/Title';
 import logoImg from '../../../assets/images/logo.png';
 import ggammaLogoImg from '../../../assets/images/ggamma-logo.png';
 import useStyles from './styles';
-
-const TabPanel = props => {
-  const { children, value, index, ...other } = props;
-
-  return <div
-    role="tabpanel"
-    hidden={value !== index}
-    id={`full-width-tabpanel-${index}`}
-    aria-labelledby={`full-width-tab-${index}`}
-    {...other}
-  >
-    {value === index && (
-      <Box pt={ 3 } pb={ 3 }>
-        <Typography>{children}</Typography>
-      </Box>
-    )}
-  </div>;
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
 
 const a11yProps = index => {
   return {
@@ -51,8 +25,7 @@ const a11yProps = index => {
 const WorkedSection = () => {
 
   const classes = useStyles();
-  const theme = useTheme();
-  const [ value, setValue ] = useState(0);
+  const [ value, setValue ] = useState('0');
   const [ jobs ] = useState([
     {
       logo: logoImg,
@@ -90,10 +63,6 @@ const WorkedSection = () => {
     setValue(newValue);
   };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
-
 	return <section className={ classes.workSection }>
     <Grid container>
       <Title align="right" gutter={ true }>Work Experience</Title>
@@ -105,7 +74,7 @@ const WorkedSection = () => {
       justify="center"
     >
       <Grid item xs={ 10 }>
-        <div className="jobsHeaderContainer">
+        <TabContext value={ value } className="jobsHeaderContainer">
           <AppBar className="jobsHeader" position="static" color="default">
             <Tabs
               className="jobsTabs"
@@ -114,49 +83,51 @@ const WorkedSection = () => {
               indicatorColor="primary"
               textColor="primary"
               variant="fullWidth"
-              aria-label="full width tabs example"
+              aria-label="Job section tabs"
             >
               {
                 jobs.map((job, index) => {
                   const alt = `${job.company} Logo`;
-                  return <Tab key={ "jobs-tabs-" + index } label={ <img src={ job.logo } alt={ alt } /> } {...a11yProps(index)} />
+                  return <Tab
+                    className="logoBtn"
+                    value={ `${index}` }
+                    key={ "jobs-tabs-" + index }
+                    label={
+                      <img src={ job.logo } alt={ alt } />
+                    } 
+                    {...a11yProps(index)} 
+                  />
                 })
               }
             </Tabs>
           </AppBar>
-          <SwipeableViews
-            axis={ theme.direction === 'rtl' ? 'x-reverse' : 'x' }
-            index={ value }
-            onChangeIndex={ handleChangeIndex }
-          >
-            {
-              jobs.map((job, index) => {
-                return <div key={ "jobs-panel-" + index } className="jobs-container">
-                  <Typography
-                    variant='h6'
-                    variantMapping={{ 'h6': 'h3' }}
-                  >
-                    { job.title } <a href={ job.companyLink } target="_blank" rel="noopener noreferrer">@ { job.company }</a>
-                    <br/>
-                  </Typography>
-                  <Typography variant='body1' paragraph={ true }>{ job.dates }</Typography>
-                  <Grid className="tasks" container>
-                    {
-                      job.tasks.map((task, index) => {
-                        return <Grid key={ "home-job-tasks-" + index } item xs={ 12 }>
-                          <Typography
-                            variant="subtitle1"
-                            variantMapping={{"subtitle1": "p"}}
-                          ><CodeIcon /> { task }</Typography>
-                        </Grid>
-                      })
-                    }
-                  </Grid>
-                </div>
-              })
-            }
-          </SwipeableViews>
-        </div>
+          {
+            jobs.map((job, index) => {
+              return <TabPanel value={ `${index}` } key={ "jobs-panel-" + index } className="jobs-container">
+                <Typography
+                  variant='h6'
+                  variantMapping={{ 'h6': 'h3' }}
+                >
+                  { job.title } <a href={ job.companyLink } target="_blank" rel="noopener noreferrer">@ { job.company }</a>
+                  <br/>
+                </Typography>
+                <Typography variant='body1' paragraph={ true }>{ job.dates }</Typography>
+                <Grid className="tasks" container>
+                  {
+                    job.tasks.map((task, index) => {
+                      return <Grid key={ "home-job-tasks-" + index } item xs={ 12 }>
+                        <Typography
+                          variant="subtitle1"
+                          variantMapping={{"subtitle1": "p"}}
+                        ><CodeIcon /> { task }</Typography>
+                      </Grid>
+                    })
+                  }
+                </Grid>
+              </TabPanel>
+            })
+          }
+        </TabContext>
       </Grid>
     </Grid>
   </section>;
