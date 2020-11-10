@@ -12,19 +12,21 @@ import Experience from '../Pages/Experience';
 import Skills from '../Pages/Skills';
 
 class Routes extends Component {
-  render() {
-    return <React.Fragment>
-      <Route path="/" exact component={ Home } />
-      <Route path="/about" exact component={ About } />
-      <Route path="/experience" exact component={ Experience } />
-      <Route path="/skills" exact component={ Skills } />
-      <Route path="/projects" exact component={ Projects } />
-      <Route path="/blog" exact component={ Blog } />
-      <Route path="/counter" exact component={ Counter } />
-      <Route path="/hireme" exact component={ Hireme } />
-      <Route path="/contact" exact component={ Contact } />
-    </React.Fragment>
-  }
+	render() {
+		return (
+			<React.Fragment>
+				<Route path='/' exact component={Home} />
+				<Route path='/about' exact component={About} />
+				<Route path='/experience' exact component={Experience} />
+				<Route path='/skills' exact component={Skills} />
+				<Route path='/projects' exact component={Projects} />
+				<Route path='/blog' exact component={Blog} />
+				<Route path='/counter' exact component={Counter} />
+				<Route path='/hireme' exact component={Hireme} />
+				<Route path='/contact' exact component={Contact} />
+			</React.Fragment>
+		);
+	}
 }
 
 export default Routes;

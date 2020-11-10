@@ -12,20 +12,20 @@ import Footer from '../Common/Footer';
 import { darkTheme } from './styles';
 
 const Layout = () => (
-  <ThemeProvider theme={ darkTheme }>
-    <CssBaseline/>
-    <BrowserRouter>
-      <Header></Header>
-      <main>
-        <Grid container justify="center">
-          <Grid item xs={ 10 }>
-            <Routes />
-          </Grid>
-        </Grid>
-      </main>
-      <Footer></Footer>
-    </BrowserRouter>
-  </ThemeProvider>
+	<ThemeProvider theme={darkTheme}>
+		<CssBaseline />
+		<BrowserRouter>
+			<Header></Header>
+			<main>
+				<Grid container justify='center'>
+					<Grid item xs={10}>
+						<Routes />
+					</Grid>
+				</Grid>
+			</main>
+			<Footer></Footer>
+		</BrowserRouter>
+	</ThemeProvider>
 );
 
 export default Layout;

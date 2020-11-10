@@ -10,19 +10,19 @@ import ContactSection from './ContactSection';
 import useStyles from './styles';
 
 const Home = () => {
-
 	const classes = useStyles();
 
-	return <React.Fragment>
-		<Container className={ classes.root } maxWidth="md">
-			<HeroSection />
-			<AboutSection />
-			<WorkedSection />
-			<ProjectsSection />
-			<ContactSection />
-		</Container>
-	</React.Fragment>;
-
-}
+	return (
+		<React.Fragment>
+			<Container className={classes.root} maxWidth='md'>
+				<HeroSection />
+				<AboutSection />
+				<WorkedSection />
+				<ProjectsSection />
+				<ContactSection />
+			</Container>
+		</React.Fragment>
+	);
+};
 
 export default Home;

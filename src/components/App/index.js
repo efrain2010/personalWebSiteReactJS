@@ -3,11 +3,9 @@ import Layout from '../Layout';
 import useStyles from './styles';
 
 const App = () => {
+	useStyles();
 
-  useStyles();
-  
-  return <Layout />
-
+	return <Layout />;
 };
 
 export default App;
