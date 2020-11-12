@@ -16,6 +16,50 @@ import logo from '../../../assets/images/logo.png';
 const Footer = () => {
 	const classes = useStyles();
 
+	const socialMediaIcons = [
+		{
+			icon: <PhoneEnabledIcon />,
+			path: 'tel:+4407949782401',
+			props: {
+				'aria-label': 'email',
+			},
+		},
+		{
+			icon: <MailOutlineIcon />,
+			path: 'mailto:efrain.villanueva3@gmail.com',
+			props: {
+				'aria-label': 'mobile phone',
+			},
+		},
+		{
+			icon: <GitHubIcon />,
+			path: 'https://github.com/efrain2010',
+			props: {
+				target: '_blank',
+				rel: 'noreferrer',
+				'aria-label': 'Github',
+			},
+		},
+		{
+			icon: <LinkedInIcon />,
+			path: 'https://www.linkedin.com/in/efrain-villanueva/',
+			props: {
+				target: '_blank',
+				rel: 'noreferrer',
+				'aria-label': 'LinkedIn',
+			},
+		},
+		{
+			icon: <InstagramIcon />,
+			path: 'https://www.instagram.com/efraintenso/',
+			props: {
+				target: '_blank',
+				rel: 'noreferrer',
+				'aria-label': 'Instagram',
+			},
+		},
+	];
+
 	return (
 		<footer className={classes.root}>
 			<Container maxWidth={false}>
@@ -26,39 +70,15 @@ const Footer = () => {
 							Created with <span className='text-red-v'>❤</span> by Efrain
 							Villanueva
 						</Typography>
-						<IconButton href='tel:+4407949782401' aria-label='email'>
-							<MailOutlineIcon />
-						</IconButton>
-						<IconButton
-							href='mailto:efrain.villanueva3@gmail.com'
-							aria-label='mobile phone'
-						>
-							<PhoneEnabledIcon />
-						</IconButton>
-						<IconButton
-							href='https://github.com/efrain2010'
-							target='_blank'
-							rel='noreferrer'
-							aria-label='Github'
-						>
-							<GitHubIcon />
-						</IconButton>
-						<IconButton
-							href='https://www.linkedin.com/in/efrain-villanueva/'
-							target='_blank'
-							rel='noreferrer'
-							aria-label='LinkedIn'
-						>
-							<LinkedInIcon />
-						</IconButton>
-						<IconButton
-							href='https://www.instagram.com/efraintenso/'
-							target='_blank'
-							rel='noreferrer'
-							aria-label='Instagram'
-						>
-							<InstagramIcon />
-						</IconButton>
+						{socialMediaIcons.map((media, index) => (
+							<IconButton
+								key={`footer-media-${index}`}
+								href={media.path}
+								{...media.props}
+							>
+								{media.icon}
+							</IconButton>
+						))}
 					</Grid>
 				</Grid>
 			</Container>

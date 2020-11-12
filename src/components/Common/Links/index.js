@@ -1,46 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 
 import useStyles from './styles';
 
 const Links = (props) => {
 	const classes = useStyles();
 
+	const linksData = [
+		{
+			props: {
+				onClick: props.sectionsRef.heroRef.refHandler,
+			},
+			title: 'Home',
+		},
+		{
+			props: {
+				onClick: props.sectionsRef.aboutRef.refHandler,
+			},
+			title: 'About',
+		},
+		{
+			props: {
+				onClick: props.sectionsRef.workRef.refHandler,
+			},
+			title: 'Experience',
+		},
+		{
+			props: {
+				onClick: props.sectionsRef.projectsRef.refHandler,
+			},
+			title: 'Projects',
+		},
+		{
+			props: {
+				onClick: props.sectionsRef.contactRef.refHandler,
+			},
+			title: 'Contact',
+		},
+	];
+
 	return (
 		<React.Fragment>
 			<nav className={classes.root}>
 				<ul>
-					<li>
-						<NavLink exact to='/'>
-							Home
-						</NavLink>
-					</li>
-					<li>
-						<NavLink exact to='/about'>
-							About
-						</NavLink>
-					</li>
-					<li>
-						<NavLink exact to='/experience'>
-							Experience
-						</NavLink>
-					</li>
-					<li>
-						<NavLink exact to='/projects'>
-							Projects
-						</NavLink>
-					</li>
-					<li>
-						<NavLink exact to='/contact'>
-							Contact
-						</NavLink>
-					</li>
-					<li>
-						<NavLink exact to='/blog'>
-							Blog
-						</NavLink>
-					</li>
+					{linksData.map((link, index) => (
+						<li key={`header-links-${index}`}>
+							<a {...link.props}>{link.title}</a>
+						</li>
+					))}
 				</ul>
 			</nav>
 		</React.Fragment>

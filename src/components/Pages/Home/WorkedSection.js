@@ -22,7 +22,7 @@ const a11yProps = (index) => {
 	};
 };
 
-const WorkedSection = () => {
+const WorkedSection = (props) => {
 	const classes = useStyles();
 	const [value, setValue] = useState('0');
 	const [jobs] = useState([
@@ -63,7 +63,7 @@ const WorkedSection = () => {
 	};
 
 	return (
-		<section className={classes.workSection}>
+		<section ref={props.refProp} className={classes.workSection}>
 			<Grid container>
 				<Title align='right' gutter={true}>
 					Work Experience

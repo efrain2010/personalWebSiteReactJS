@@ -190,7 +190,6 @@ const useStyles = makeStyles((theme) => ({
 			'& .containerSquare': {
 				'&::before': {
 					content: '""',
-					backgroundColor: 'white',
 					height: '100%',
 					width: '100%',
 					zIndex: 2,

@@ -8,6 +8,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 
 import Links from '../Links';
+import { sectionsRefs } from '../../Pages/Home';
 
 import useStyles from './styles';
 import logo from '../../../assets/images/logo.png';
@@ -32,6 +33,8 @@ const Header = (props) => {
 	const classes = useStyles();
 	const [headerClasses, setHeaderClasses] = useState([classes.root]);
 	const [headerRef] = useState(createRef());
+
+	const homeSectionsRef = sectionsRefs;
 
 	useEffect(() => {
 		const logit = () => {
@@ -70,7 +73,11 @@ const Header = (props) => {
 						</Grid>
 						<Grid item xs={10}>
 							<Grid container justify='flex-end' spacing={3}>
-								<Links className={classes.nav} type='hidden' />
+								<Links
+									sectionsRef={homeSectionsRef}
+									className={classes.nav}
+									type='hidden'
+								/>
 							</Grid>
 						</Grid>
 					</Grid>

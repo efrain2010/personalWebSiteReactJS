@@ -10,7 +10,7 @@ import Title from '../../Common/Title';
 import efraWorkingImg from '../../../assets/images/efra-working.jpg';
 import useStyles from './styles';
 
-const AboutSection = () => {
+const AboutSection = (props) => {
 	const classes = useStyles();
 
 	const skillsList = [
@@ -23,7 +23,7 @@ const AboutSection = () => {
 	];
 
 	return (
-		<section className={classes.aboutMe}>
+		<section ref={props.refProp} className={classes.aboutMe}>
 			<Grid container>
 				<Title align='left' gutter={true}>
 					About Me

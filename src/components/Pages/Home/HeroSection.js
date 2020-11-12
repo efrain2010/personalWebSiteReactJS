@@ -5,11 +5,12 @@ import Typography from '@material-ui/core/Typography';
 
 import useStyles from './styles';
 
-const HeroSection = () => {
+const HeroSection = (props) => {
 	const classes = useStyles();
 
 	return (
 		<section
+			ref={props.refProp}
 			className={[classes.hero, 'heroSection'].join(' ')}
 			id='homeHeroSection'
 		>

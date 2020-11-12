@@ -7,11 +7,11 @@ import useStyles from './styles';
 
 import codeImg from '../../../assets/images/code-background.jpg';
 
-const ProjectsSection = () => {
+const ProjectsSection = (props) => {
 	const classes = useStyles();
 
 	return (
-		<section className={classes.projects}>
+		<section ref={props.refProp} className={classes.projects}>
 			<Grid container>
 				<Title align='left' gutter={true}>
 					Some Of My Projects
