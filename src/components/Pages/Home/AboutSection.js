@@ -1,5 +1,6 @@
 import React from 'react';
 import { loremIpsum } from 'lorem-ipsum';
+import { Element } from 'react-scroll';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -23,7 +24,7 @@ const AboutSection = (props) => {
 	];
 
 	return (
-		<section ref={props.refProp} className={classes.aboutMe}>
+		<Element name='homeAboutSection' className={classes.aboutMe}>
 			<Grid container>
 				<Title align='left' gutter={true}>
 					About Me
@@ -75,7 +76,7 @@ const AboutSection = (props) => {
 					</figure>
 				</Grid>
 			</Grid>
-		</section>
+		</Element>
 	);
 };
 

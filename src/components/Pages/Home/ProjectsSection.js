@@ -1,4 +1,6 @@
 import React from 'react';
+import { Element } from 'react-scroll';
+
 import Grid from '@material-ui/core/Grid';
 
 import Title from '../../Common/Title';
@@ -11,7 +13,7 @@ const ProjectsSection = (props) => {
 	const classes = useStyles();
 
 	return (
-		<section ref={props.refProp} className={classes.projects}>
+		<Element name='homeProjectsSection' className={classes.projects}>
 			<Grid container>
 				<Title align='left' gutter={true}>
 					Some Of My Projects
@@ -48,7 +50,7 @@ const ProjectsSection = (props) => {
 					</Grid>
 				))}
 			</Grid>
-		</section>
+		</Element>
 	);
 };
 

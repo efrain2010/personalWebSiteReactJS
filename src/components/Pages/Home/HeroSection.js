@@ -1,4 +1,6 @@
 import React from 'react';
+import { Element } from 'react-scroll';
+
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
@@ -9,10 +11,9 @@ const HeroSection = (props) => {
 	const classes = useStyles();
 
 	return (
-		<section
-			ref={props.refProp}
+		<Element
 			className={[classes.hero, 'heroSection'].join(' ')}
-			id='homeHeroSection'
+			name='homeHeroSection'
 		>
 			<Grid container direction='row' justify='flex-start' alignItems='center'>
 				<Grid item xs={12}>
@@ -41,7 +42,7 @@ const HeroSection = (props) => {
 					</Button>
 				</Grid>
 			</Grid>
-		</section>
+		</Element>
 	);
 };
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Element } from 'react-scroll';
 
 import Grid from '@material-ui/core/Grid';
 import AppBar from '@material-ui/core/AppBar';
@@ -63,7 +64,7 @@ const WorkedSection = (props) => {
 	};
 
 	return (
-		<section ref={props.refProp} className={classes.workSection}>
+		<Element name='homeWorkedSection' className={classes.workSection}>
 			<Grid container>
 				<Title align='right' gutter={true}>
 					Work Experience
@@ -137,7 +138,7 @@ const WorkedSection = (props) => {
 					</TabContext>
 				</Grid>
 			</Grid>
-		</section>
+		</Element>
 	);
 };
 

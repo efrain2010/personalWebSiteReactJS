@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-scroll';
 
 import useStyles from './styles';
 
@@ -9,31 +10,25 @@ const Links = (props) => {
 	const linksData = [
 		{
 			props: {
-				onClick: props.sectionsRef.heroRef.refHandler,
-			},
-			title: 'Home',
-		},
-		{
-			props: {
-				onClick: props.sectionsRef.aboutRef.refHandler,
+				containerId: 'homeAboutSection',
 			},
 			title: 'About',
 		},
 		{
 			props: {
-				onClick: props.sectionsRef.workRef.refHandler,
+				containerId: 'homeWorkedSection',
 			},
 			title: 'Experience',
 		},
 		{
 			props: {
-				onClick: props.sectionsRef.projectsRef.refHandler,
+				containerId: 'homeProjectsSection',
 			},
 			title: 'Projects',
 		},
 		{
 			props: {
-				onClick: props.sectionsRef.contactRef.refHandler,
+				containerId: 'homeContactSection',
 			},
 			title: 'Contact',
 		},
@@ -45,7 +40,15 @@ const Links = (props) => {
 				<ul>
 					{linksData.map((link, index) => (
 						<li key={`header-links-${index}`}>
-							<a {...link.props}>{link.title}</a>
+							<Link
+								activeClass='active'
+								to={link.props.containerId}
+								spy={true}
+								smooth={true}
+								duration={500}
+							>
+								{link.title}
+							</Link>
 						</li>
 					))}
 				</ul>
