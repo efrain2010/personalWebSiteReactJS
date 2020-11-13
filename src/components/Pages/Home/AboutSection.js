@@ -11,7 +11,7 @@ import Title from '../../Common/Title';
 import efraWorkingImg from '../../../assets/images/efra-working.jpg';
 import useStyles from './styles';
 
-const AboutSection = (props) => {
+const AboutSection = () => {
 	const classes = useStyles();
 
 	const skillsList = [

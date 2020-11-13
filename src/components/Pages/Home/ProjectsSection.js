@@ -9,7 +9,7 @@ import useStyles from './styles';
 
 import codeImg from '../../../assets/images/code-background.jpg';
 
-const ProjectsSection = (props) => {
+const ProjectsSection = () => {
 	const classes = useStyles();
 
 	return (
@@ -32,7 +32,7 @@ const ProjectsSection = (props) => {
 							container
 							justify={index % 2 === 0 ? 'flex-start' : 'flex-end'}
 						>
-							<Grid item xs={5}>
+							<Grid item xs={7}>
 								<div className='containerCicle'>
 									<div className='containerSquare'>
 										<div className='content'>

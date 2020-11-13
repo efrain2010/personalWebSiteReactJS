@@ -23,7 +23,7 @@ const a11yProps = (index) => {
 	};
 };
 
-const WorkedSection = (props) => {
+const WorkedSection = () => {
 	const classes = useStyles();
 	const [value, setValue] = useState('0');
 	const [jobs] = useState([

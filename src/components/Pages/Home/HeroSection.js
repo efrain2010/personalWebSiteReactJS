@@ -7,14 +7,11 @@ import Typography from '@material-ui/core/Typography';
 
 import useStyles from './styles';
 
-const HeroSection = (props) => {
+const HeroSection = () => {
 	const classes = useStyles();
 
 	return (
-		<Element
-			className={[classes.hero, 'heroSection'].join(' ')}
-			name='homeHeroSection'
-		>
+		<Element name='homeHeroSection' className={classes.hero}>
 			<Grid container direction='row' justify='flex-start' alignItems='center'>
 				<Grid item xs={12}>
 					<Typography variant='body1'>Hey there! I'm</Typography>
@@ -33,12 +30,12 @@ const HeroSection = (props) => {
 						</Typography>
 					</Grid>
 					<Button
-						className={classes.letsTalkBtn}
+						className='neon-btn'
 						variant='outlined'
 						color='secondary'
 						href='mailto:efrain.villanueva3@gmail.com'
 					>
-						Let's talk
+						Let's Talk
 					</Button>
 				</Grid>
 			</Grid>

@@ -10,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
 		zIndex: 9,
 	},
 	scrolled: {
-		boxShadow: '6px 0 11px -2px #000000',
+		boxShadow:
+			'-11px 0px 11px -2px rgb(0 0 0 / 0.6), 7px 0 11px -2px rgb(0 0 0 / 0.6)',
 	},
 	logo: {
 		'& h2': {

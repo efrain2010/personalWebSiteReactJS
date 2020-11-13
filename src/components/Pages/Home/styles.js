@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		'& > section:not(.heroSection)': {
+		'& > div:nth-child(1n+2)': {
 			paddingTop: theme.spacing(3),
 		},
 	},
@@ -18,40 +18,6 @@ const useStyles = makeStyles((theme) => ({
 		},
 		'& strong': {
 			color: theme.palette.secondary.main,
-		},
-	},
-	letsTalkBtn: {
-		animation: `$btnGlow 3000ms ${theme.transitions.easing.easeInOut}`,
-		animationIterationCount: 'infinite',
-		borderWidth: 2,
-		padding: '15px 35px',
-		overflow: 'hidden',
-		'& .MuiButton-label': {
-			position: 'relative',
-			'&::before, &::after': {
-				backgroundColor: theme.palette.secondary.main,
-				bottom: 0,
-				content: '""',
-				height: 1,
-				left: '-5%',
-				position: 'absolute',
-				transition: `all 150ms ${theme.transitions.easing.easeInOut}`,
-				width: '110%',
-			},
-			'&::before': {
-				left: '-200%',
-			},
-			'&::after': {
-				left: '200%',
-			},
-		},
-		'&:hover, &:focus': {
-			borderWidth: 2,
-			'& .MuiButton-label': {
-				'&::before, &::after': {
-					left: '-5%',
-				},
-			},
 		},
 	},
 	aboutMe: {
@@ -193,7 +159,7 @@ const useStyles = makeStyles((theme) => ({
 					height: '100%',
 					width: '100%',
 					zIndex: 2,
-					transform: 'scale(1.3)',
+					// transform: 'scale(1.3)',
 					backgroundColor: 'rgb(48 48 48 / 0.6)',
 					position: 'absolute',
 					left: 0,
@@ -206,7 +172,7 @@ const useStyles = makeStyles((theme) => ({
 					position: 'relative',
 					left: 0,
 					top: 0,
-					transform: 'scale(1.3)',
+					// transform: 'scale(1.3)',
 				},
 				'& figcaption': {
 					color: theme.palette.secondary.main,
@@ -235,15 +201,10 @@ const useStyles = makeStyles((theme) => ({
 			},
 		},
 	},
-	'@keyframes btnGlow': {
-		'0%': {
-			opacity: 1,
-		},
-		'50%': {
-			opacity: 0.4,
-		},
-		'100%': {
-			opacity: 1,
+	contact: {
+		padding: '20% 0 !important',
+		'& a': {
+			marginTop: theme.spacing(3),
 		},
 	},
 	'@keyframes neonSign': {
