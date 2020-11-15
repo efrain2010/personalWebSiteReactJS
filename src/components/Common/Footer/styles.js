@@ -4,6 +4,7 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		backgroundColor: '#303030',
 		paddingTop: 30,
+		paddingBottom: 15,
 		textAlign: 'center',
 		'& *': {
 			fontSize: '1rem',

@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import Routes from '../Routes';
 import Header from '../Common/Header';
 import Footer from '../Common/Footer';
+import SocialMedia from '../Common/SocialMedia';
 
 import { darkTheme } from './styles';
 
@@ -24,6 +25,7 @@ const Layout = () => (
 				</Grid>
 			</main>
 			<Footer></Footer>
+			<SocialMedia />
 		</BrowserRouter>
 	</ThemeProvider>
 );
