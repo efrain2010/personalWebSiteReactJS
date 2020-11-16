@@ -6,6 +6,9 @@ const useStyles = makeStyles((theme) => ({
 			color: '#FFFFFF',
 			textDecoration: 'none',
 		},
+		img: {
+			width: '100%',
+		},
 		section: {
 			position: 'relative',
 		},

@@ -27,7 +27,7 @@ const Footer = () => {
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								Design inspired in Brittany Chiang profile
+								Design inspired by Brittany Chiang profile
 							</a>
 						</Typography>
 					</Grid>

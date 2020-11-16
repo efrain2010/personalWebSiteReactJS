@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core/styles';
+import withWidth, { isWidthDown } from '@material-ui/core/withWidth';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Grid from '@material-ui/core/Grid';
@@ -12,22 +13,24 @@ import SocialMedia from '../Common/SocialMedia';
 
 import { darkTheme } from './styles';
 
-const Layout = () => (
-	<ThemeProvider theme={darkTheme}>
-		<CssBaseline />
-		<BrowserRouter>
-			<Header></Header>
-			<main>
-				<Grid container justify='center'>
-					<Grid item xs={10}>
-						<Routes />
+const Layout = (props) => {
+	return (
+		<ThemeProvider theme={darkTheme}>
+			<CssBaseline />
+			<BrowserRouter>
+				<Header />
+				<main>
+					<Grid container justify='center'>
+						<Grid item xs={10}>
+							<Routes />
+						</Grid>
 					</Grid>
-				</Grid>
-			</main>
-			<Footer></Footer>
-			<SocialMedia />
-		</BrowserRouter>
-	</ThemeProvider>
-);
+				</main>
+				<Footer />
+				{!isWidthDown('xs', props.width) ? <SocialMedia /> : null}
+			</BrowserRouter>
+		</ThemeProvider>
+	);
+};
 
-export default Layout;
+export default withWidth()(Layout);

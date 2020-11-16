@@ -82,7 +82,6 @@ const useStyles = makeStyles((theme) => ({
 				height: '100%',
 				transition: `all 150ms ${theme.transitions.easing.sharp}`,
 				transform: 'scale(1)',
-				width: '100%',
 			},
 			'&:hover': {
 				'&::before': {
@@ -150,53 +149,31 @@ const useStyles = makeStyles((theme) => ({
 		},
 	},
 	projects: {
-		'& .containerCicle': {
-			position: 'relative',
-			zIndex: 1,
-			'& .containerSquare': {
+		'& .content': {
+			paddingBottom: theme.spacing(3),
+			'& figure': {
+				margin: 0,
+				position: 'relative',
+				'& img': {},
 				'&::before': {
 					content: '""',
 					height: '100%',
+					left: 0,
+					position: 'absolute',
+					top: 0,
 					width: '100%',
 					zIndex: 2,
-					// transform: 'scale(1.3)',
-					backgroundColor: 'rgb(48 48 48 / 0.6)',
-					position: 'absolute',
-					left: 0,
-					top: 0,
 				},
-				'& img': {
-					height: '100%',
-					width: '100%',
-					objectFit: 'cover',
-					position: 'relative',
-					left: 0,
-					top: 0,
-					// transform: 'scale(1.3)',
-				},
-				'& figcaption': {
-					color: theme.palette.secondary.main,
-					fontSize: '1.5rem',
-					fontWeight: 100,
-					textShadow: () => {
-						const blurColor = '10px rgb(236 43 61 / 0.8)';
-						return `2px 2px ${blurColor},
-                  2px -2px ${blurColor},
-                  -2px 2px ${blurColor},
-                  -2px -2px ${blurColor}`;
+			},
+			'& ul': {
+				padding: 0,
+				'& li': {
+					listStyle: 'none',
+					display: 'inline-block',
+					marginRight: theme.spacing(2),
+					'&:last-child': {
+						marginRight: 0,
 					},
-					animation: `$neonSign 1s ${theme.transitions.easing.easeInOut} infinite alternate`,
-					position: 'absolute',
-					left: 0,
-					right: 0,
-					bottom: 0,
-					margin: 'auto',
-					top: 0,
-					textAlign: 'center',
-					display: 'flex',
-					justifyContent: 'center',
-					alignItems: 'center',
-					zIndex: 2,
 				},
 			},
 		},

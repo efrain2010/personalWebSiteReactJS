@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
 		},
 		'& .underline': {
 			backgroundColor: theme.palette.secondary.main,
-			boxShadow: '0px 0px 8px 1px red',
+			boxShadow: `0px 0px 8px 1px ${theme.palette.secondary.main}`,
 			bottom: 0,
 			display: 'inline-block',
 			height: 1,

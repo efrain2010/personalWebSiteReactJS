@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
 
 import useStyles from './styles';
 
-const Links = (props) => {
+const Links = () => {
 	const classes = useStyles();
 
 	const linksData = [
@@ -55,10 +54,6 @@ const Links = (props) => {
 			</nav>
 		</React.Fragment>
 	);
-};
-
-Links.propTypes = {
-	type: PropTypes.string.isRequired,
 };
 
 export default Links;

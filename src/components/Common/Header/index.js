@@ -2,10 +2,13 @@ import React, { useState, useEffect, createRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+import withWidth, { isWidthDown } from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 import Links from '../Links';
 
@@ -69,9 +72,17 @@ const Header = (props) => {
 							</NavLink>
 						</Grid>
 						<Grid item xs={10}>
-							<Grid container justify='flex-end' spacing={3}>
-								<Links className={classes.nav} type='hidden' />
-							</Grid>
+							{!isWidthDown('xs', props.width) ? (
+								<Grid container justify='flex-end' spacing={3}>
+									<Links className={classes.nav} />
+								</Grid>
+							) : (
+								<Grid container justify='flex-end' spacing={3}>
+									<IconButton aria-label='delete'>
+										<MenuIcon />
+									</IconButton>
+								</Grid>
+							)}
 						</Grid>
 					</Grid>
 				</Container>
@@ -80,4 +91,4 @@ const Header = (props) => {
 	);
 };
 
-export default Header;
+export default withWidth()(Header);
