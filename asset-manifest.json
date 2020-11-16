@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.js": "/personalWebSiteReactJS/static/js/main.79a42639.chunk.js",
-    "main.js.map": "/personalWebSiteReactJS/static/js/main.79a42639.chunk.js.map",
-    "runtime-main.js": "/personalWebSiteReactJS/static/js/runtime-main.5f389ec5.js",
-    "runtime-main.js.map": "/personalWebSiteReactJS/static/js/runtime-main.5f389ec5.js.map",
-    "static/js/2.4ffce34c.chunk.js": "/personalWebSiteReactJS/static/js/2.4ffce34c.chunk.js",
-    "static/js/2.4ffce34c.chunk.js.map": "/personalWebSiteReactJS/static/js/2.4ffce34c.chunk.js.map",
-    "index.html": "/personalWebSiteReactJS/index.html",
-    "precache-manifest.087fdca2fefed1bbbb58cbda2a7eea1a.js": "/personalWebSiteReactJS/precache-manifest.087fdca2fefed1bbbb58cbda2a7eea1a.js",
-    "service-worker.js": "/personalWebSiteReactJS/service-worker.js",
-    "static/js/2.4ffce34c.chunk.js.LICENSE.txt": "/personalWebSiteReactJS/static/js/2.4ffce34c.chunk.js.LICENSE.txt",
-    "static/media/code-background.jpg": "/personalWebSiteReactJS/static/media/code-background.80bc5fcb.jpg",
-    "static/media/efra-working.jpg": "/personalWebSiteReactJS/static/media/efra-working.e314f026.jpg",
-    "static/media/logo.png": "/personalWebSiteReactJS/static/media/logo.8cea5974.png",
-    "static/media/nahil-screenshot.png": "/personalWebSiteReactJS/static/media/nahil-screenshot.a536cfc0.png",
-    "static/media/numax-screenshot.png": "/personalWebSiteReactJS/static/media/numax-screenshot.b98bd995.png",
-    "static/media/stunited-screenshot.png": "/personalWebSiteReactJS/static/media/stunited-screenshot.9847cba6.png"
+    "main.js": "/static/js/main.798c1a9e.chunk.js",
+    "main.js.map": "/static/js/main.798c1a9e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0128b0c7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0128b0c7.js.map",
+    "static/js/2.4ffce34c.chunk.js": "/static/js/2.4ffce34c.chunk.js",
+    "static/js/2.4ffce34c.chunk.js.map": "/static/js/2.4ffce34c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e3167e5fa34622bf9aca715d9f7acd79.js": "/precache-manifest.e3167e5fa34622bf9aca715d9f7acd79.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/2.4ffce34c.chunk.js.LICENSE.txt": "/static/js/2.4ffce34c.chunk.js.LICENSE.txt",
+    "static/media/code-background.jpg": "/static/media/code-background.80bc5fcb.jpg",
+    "static/media/efra-working.jpg": "/static/media/efra-working.e314f026.jpg",
+    "static/media/logo.png": "/static/media/logo.8cea5974.png",
+    "static/media/nahil-screenshot.png": "/static/media/nahil-screenshot.a536cfc0.png",
+    "static/media/numax-screenshot.png": "/static/media/numax-screenshot.b98bd995.png",
+    "static/media/stunited-screenshot.png": "/static/media/stunited-screenshot.9847cba6.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5f389ec5.js",
+    "static/js/runtime-main.0128b0c7.js",
     "static/js/2.4ffce34c.chunk.js",
-    "static/js/main.79a42639.chunk.js"
+    "static/js/main.798c1a9e.chunk.js"
   ]
 }
