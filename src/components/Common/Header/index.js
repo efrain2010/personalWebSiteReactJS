@@ -35,6 +35,7 @@ const Header = (props) => {
 	const classes = useStyles();
 	const [headerClasses, setHeaderClasses] = useState([classes.root]);
 	const [headerRef] = useState(createRef());
+	const [openMenu, setOpenMenu] = useState(false);
 
 	useEffect(() => {
 		const logit = () => {
@@ -61,6 +62,12 @@ const Header = (props) => {
 		};
 	}, [classes, headerClasses, headerRef]);
 
+	const onClickHandler = (action) => {
+		if (isWidthDown('xs', props.width)) {
+			setOpenMenu(action);
+		}
+	};
+
 	return (
 		<HideOnScroll {...props}>
 			<header className={headerClasses.join(' ')} ref={headerRef}>
@@ -72,17 +79,16 @@ const Header = (props) => {
 							</NavLink>
 						</Grid>
 						<Grid item xs={10}>
-							{!isWidthDown('xs', props.width) ? (
-								<Grid container justify='flex-end' spacing={3}>
-									<Links className={classes.nav} />
-								</Grid>
-							) : (
-								<Grid container justify='flex-end' spacing={3}>
-									<IconButton aria-label='delete'>
-										<MenuIcon />
-									</IconButton>
-								</Grid>
-							)}
+							<Grid container justify='flex-end' spacing={3}>
+								<IconButton
+									className={classes.menuBtn}
+									aria-label='Menu Open Button'
+									onClick={() => onClickHandler(true)}
+								>
+									<MenuIcon />
+								</IconButton>
+								<Links behaviourHandler={onClickHandler} opened={openMenu} />
+							</Grid>
 						</Grid>
 					</Grid>
 				</Container>

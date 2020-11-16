@@ -10,8 +10,8 @@ const useStyles = makeStyles((theme) => ({
 		zIndex: 9,
 	},
 	scrolled: {
-		boxShadow:
-			'-11px 0px 11px -2px rgb(0 0 0 / 0.6), 7px 0 11px -2px rgb(0 0 0 / 0.6)',
+		boxShadow: `-11px 0px 11px -2px rgba(0, 0, 0, 0.6), 
+								7px 0 11px - 2px rgb(0, 0, 0, 0.6)`,
 	},
 	logo: {
 		'& h2': {
@@ -23,8 +23,11 @@ const useStyles = makeStyles((theme) => ({
 			maxWidth: 25,
 		},
 	},
-	nav: {
-		paddingTop: 20,
+	menuBtn: {
+		display: 'none !important',
+		[theme.breakpoints.down('xs')]: {
+			display: 'block !important',
+		},
 	},
 }));
 

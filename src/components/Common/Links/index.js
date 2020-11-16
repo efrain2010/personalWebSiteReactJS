@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-scroll';
+import withWidth, { isWidthDown } from '@material-ui/core/withWidth';
+
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
 
 import useStyles from './styles';
 
-const Links = () => {
+const Links = (props) => {
 	const classes = useStyles();
+
+	const menuBehaviour = props.opened ? 'open' : '';
 
 	const linksData = [
 		{
@@ -35,16 +41,27 @@ const Links = () => {
 
 	return (
 		<React.Fragment>
-			<nav className={classes.root}>
+			<nav className={[classes.root, menuBehaviour].join(' ')}>
 				<ul>
+					{isWidthDown('xs', props.width) ? (
+						<li>
+							<IconButton
+								aria-label='Menu Close Button'
+								onClick={() => props.behaviourHandler(false)}
+							>
+								<CloseIcon />
+							</IconButton>
+						</li>
+					) : null}
 					{linksData.map((link, index) => (
 						<li key={`header-links-${index}`}>
 							<Link
 								activeClass='active'
-								to={link.props.containerId}
-								spy={true}
-								smooth={true}
 								duration={500}
+								onClick={() => props.behaviourHandler(false)}
+								smooth={true}
+								spy={true}
+								to={link.props.containerId}
 							>
 								{link.title}
 							</Link>
@@ -56,4 +73,4 @@ const Links = () => {
 	);
 };
 
-export default Links;
+export default withWidth()(Links);

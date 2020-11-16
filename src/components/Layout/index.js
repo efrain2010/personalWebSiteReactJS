@@ -21,7 +21,7 @@ const Layout = (props) => {
 				<Header />
 				<main>
 					<Grid container justify='center'>
-						<Grid item xs={10}>
+						<Grid item sm={10} xs={11}>
 							<Routes />
 						</Grid>
 					</Grid>

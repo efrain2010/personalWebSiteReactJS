@@ -20,10 +20,13 @@ const useStyles = makeStyles((theme) => ({
 		},
 		[theme.breakpoints.down('xs')]: {
 			'& > *': {
-				fontSize: '1.8rem',
-				paddingLeft: '10px !important',
-				paddingRight: '10px !important',
-				textAlign: 'center',
+				fontSize: '2.2rem',
+				paddingLeft: '0px !important',
+				paddingRight: '0px !important',
+				textAlign: 'center !important',
+			},
+			'& .underline': {
+				bottom: -2,
 			},
 		},
 	},

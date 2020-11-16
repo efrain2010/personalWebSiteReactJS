@@ -20,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
 			color: theme.palette.secondary.main,
 		},
 		[theme.breakpoints.down('xs')]: {
+			'& > div': {
+				height: 'auto',
+				padding: '15% 0',
+			},
 			'& h1': {
 				fontSize: '2rem',
 			},
