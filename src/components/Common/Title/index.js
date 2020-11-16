@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import withWidth, { isWidthDown } from '@material-ui/core/withWidth';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
@@ -23,6 +24,10 @@ const Title = (props) => {
 		align = 'flex-end';
 	}
 
+	if (isWidthDown('xs', props.width)) {
+		align = 'center';
+	}
+
 	return (
 		<Grid className={classes.join(' ')} container justify={align}>
 			<Typography variant='h2'>
@@ -41,4 +46,4 @@ Title.defaultProps = {
 	align: 'right',
 };
 
-export default Title;
+export default withWidth()(Title);

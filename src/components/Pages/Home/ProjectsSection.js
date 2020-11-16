@@ -60,7 +60,12 @@ const ProjectsSection = () => {
 				{projectsList.map((project, index) => (
 					<Grid className='content' key={`projects-list-${index}`} item xs={12}>
 						<Grid className='inner-content' container spacing={4}>
-							<Grid item xs={6}>
+							<Grid item sm={6} xs={12}>
+								<figure>
+									<img src={project.image} alt='project screenshot' />
+								</figure>
+							</Grid>
+							<Grid item sm={6} xs={12}>
 								<Typography variant='h5' variantMapping={{ h5: 'h2' }}>
 									{project.title}
 								</Typography>
@@ -70,11 +75,6 @@ const ProjectsSection = () => {
 										<li key={`project-skill-${index}`}>{skill}</li>
 									))}
 								</ul>
-							</Grid>
-							<Grid item xs={6}>
-								<figure>
-									<img src={project.image} alt='project screenshot' />
-								</figure>
 							</Grid>
 						</Grid>
 					</Grid>

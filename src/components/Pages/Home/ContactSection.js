@@ -21,7 +21,7 @@ const ContactSection = () => {
 				</Title>
 			</Grid>
 			<Grid container direction='row' alignItems='center' justify='center'>
-				<Grid item xs={8}>
+				<Grid item sm={8} xs={12}>
 					<Typography variant='body1' align='center'>
 						Currenlty I am looking for an opprotunity that allows me to stay and
 						make a life in the UK, however, send me a message if you want to

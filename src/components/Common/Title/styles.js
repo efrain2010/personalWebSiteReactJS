@@ -18,6 +18,14 @@ const useStyles = makeStyles((theme) => ({
 			position: 'absolute',
 			width: '100%',
 		},
+		[theme.breakpoints.down('xs')]: {
+			'& > *': {
+				fontSize: '1.8rem',
+				paddingLeft: '10px !important',
+				paddingRight: '10px !important',
+				textAlign: 'center',
+			},
+		},
 	},
 	left: {
 		'& > *': {

@@ -30,8 +30,14 @@ const AboutSection = () => {
 					About Me
 				</Title>
 			</Grid>
-			<Grid container direction='row' alignItems='flex-start' justify='center'>
-				<Grid item xs={6}>
+			<Grid
+				className='content'
+				container
+				direction='row'
+				alignItems='flex-start'
+				justify='center'
+			>
+				<Grid item sm={6} xs={12}>
 					<Typography variant='body1' variantMapping={{ body1: 'p' }}>
 						I'm a <strong>Fullstack Web Developer</strong> based in Scotland
 						with 6 years of professional experience. I'm interested in different
@@ -68,7 +74,7 @@ const AboutSection = () => {
 						})}
 					</Grid>
 				</Grid>
-				<Grid item xs={6}>
+				<Grid item sm={6} xs={12}>
 					<figure className='photo'>
 						<div className='innerFrame'>
 							<img src={efraWorkingImg} alt='Efra morning work' />

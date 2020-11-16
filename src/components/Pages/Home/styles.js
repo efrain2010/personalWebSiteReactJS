@@ -19,6 +19,17 @@ const useStyles = makeStyles((theme) => ({
 		'& strong': {
 			color: theme.palette.secondary.main,
 		},
+		[theme.breakpoints.down('xs')]: {
+			'& h1': {
+				fontSize: '2rem',
+			},
+			'& h2': {
+				fontSize: '1.8rem',
+			},
+			'& p': {
+				fontSize: '1rem',
+			},
+		},
 	},
 	aboutMe: {
 		'& .photo': {
@@ -100,13 +111,6 @@ const useStyles = makeStyles((theme) => ({
 				},
 			},
 		},
-		// Adjust styles for responsive
-		[theme.breakpoints.up('sm')]: {
-			'& .photo': {
-				height: 280,
-				width: 280,
-			},
-		},
 		'& .skills': {
 			'& svg': {
 				display: 'inline-block',
@@ -115,6 +119,21 @@ const useStyles = makeStyles((theme) => ({
 			},
 			'& p:hover svg': {
 				color: theme.palette.secondary.main,
+			},
+		},
+		[theme.breakpoints.down('xs')]: {
+			'& .photo': {
+				height: 280,
+				marginBottom: theme.spacing(2),
+				width: 280,
+			},
+			'& .content': {
+				'& > div:nth-child(1)': {
+					order: 2,
+				},
+				'& > div:nth-child(2)': {
+					order: 1,
+				},
 			},
 		},
 	},
@@ -145,6 +164,12 @@ const useStyles = makeStyles((theme) => ({
 			'& .tasks p:hover svg': {
 				color: theme.palette.secondary.main,
 				transform: 'scale(1.2)',
+			},
+		},
+		[theme.breakpoints.down('xs')]: {
+			'& .jobs-container': {
+				padding: 0,
+				paddingTop: theme.spacing(2),
 			},
 		},
 	},

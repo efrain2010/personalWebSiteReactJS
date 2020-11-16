@@ -71,7 +71,7 @@ const WorkedSection = () => {
 				</Title>
 			</Grid>
 			<Grid container direction='row' alignItems='center' justify='center'>
-				<Grid item xs={10}>
+				<Grid item sm={10} xs={12}>
 					<TabContext value={value} className='jobsHeaderContainer'>
 						<AppBar className='jobsHeader' position='static' color='default'>
 							<Tabs
