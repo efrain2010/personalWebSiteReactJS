@@ -25,8 +25,8 @@ const HeroSection = () => {
 					</Typography>
 					<Grid item xs={8}>
 						<Typography variant='h5' gutterBottom={true} paragraph={true}>
-							I'm a software developer based in Glasgow, Scotland specialized in
-							creating astonishing webpages and webapps.
+							I'm a software developer currently based in Glasgow, Scotland
+							specialized in creating astonishing webpages and webapps.
 						</Typography>
 					</Grid>
 					<Button

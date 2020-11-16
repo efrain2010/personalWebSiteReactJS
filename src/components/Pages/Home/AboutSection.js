@@ -1,5 +1,4 @@
 import React from 'react';
-import { loremIpsum } from 'lorem-ipsum';
 import { Element } from 'react-scroll';
 
 import Grid from '@material-ui/core/Grid';
@@ -18,9 +17,11 @@ const AboutSection = () => {
 		'JavaScript (ES6)',
 		'AngularJS',
 		'React',
+		'Typescript',
 		'Django',
 		'Laravel',
-		'Java',
+		'Webpack',
+		'MaterialUI',
 	];
 
 	return (
@@ -31,27 +32,61 @@ const AboutSection = () => {
 				</Title>
 			</Grid>
 			<Grid
+				alignItems='flex-start'
 				className='content'
 				container
 				direction='row'
-				alignItems='flex-start'
 				justify='center'
+				spacing={2}
 			>
 				<Grid item sm={6} xs={12}>
 					<Typography variant='body1' variantMapping={{ body1: 'p' }}>
 						I'm a <strong>Fullstack Web Developer</strong> based in Scotland
-						with 6 years of professional experience. I'm interested in different
-						kind of projects like mobile, desktop and game development, but
-						mainly in web development.
+						with six years of professional experience. I'm interested in
+						different kinds of projects like mobile, desktop and game
+						development, but mainly web development.
 						<br />
 						<br />
-						{loremIpsum({ count: 5 })}
+						Shortly after graduating from my bachelor's degree at the{' '}
+						<strong>
+							<a
+								href='https://www.contaduria.uady.mx'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Autonomous University of Yucatan
+							</a>
+						</strong>{' '}
+						I began working at{' '}
+						<strong>
+							<a
+								href='https://ggamma.com/'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Ggamma
+							</a>
+						</strong>{' '}
+						where I spent five years. Later on, I worked as a freelance web
+						developer for over a year. In 2019 I moved to Glasgow to study a
+						master's degree in Software Development at the{' '}
+						<strong>
+							<a
+								href='https://www.gla.ac.uk'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								University of Glasgow
+							</a>
+						</strong>{' '}
+						. I am now looking for an opportunity to work in a great company
+						that helps me to skyrocket my career.
 					</Typography>
 
 					<br />
 
 					<Typography variant='subtitle1' variantMapping={{ subtitle1: 'p' }}>
-						Technologies I've used:
+						These are some of the technologies I've used:
 					</Typography>
 					<Grid
 						className='skills'
