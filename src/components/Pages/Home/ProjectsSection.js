@@ -8,7 +8,9 @@ import Title from '../../Common/Title';
 
 import useStyles from './styles';
 
-import codeImg from '../../../assets/images/code-background.jpg';
+import nahilScreenshot from '../../../assets/images/nahil-screenshot.png';
+import numaxScreenshot from '../../../assets/images/numax-screenshot.png';
+import stunitedScreenshot from '../../../assets/images/stunited-screenshot.png';
 
 const ProjectsSection = () => {
 	const classes = useStyles();
@@ -17,28 +19,28 @@ const ProjectsSection = () => {
 		{
 			title: 'Nahil Alianza Inmobiliaria',
 			type: 'Website and CMS',
-			image: codeImg,
-			link: 'https://github.com/facebook/create-react-app/issues/',
+			image: nahilScreenshot,
+			link: 'nahilrentasyventas.com',
 			description:
-				'A nice CMS System to allow the company manage their properties and receive messages from prospects.',
+				'A CMS System to allow a real estate company to manage their properties and receive messages from prospects.',
 			skills: ['Laravel 4.5', 'AngularJS', 'JQuery', 'Bower', 'SASS'],
 		},
 		{
-			title: 'Nahil Alianza Inmobiliaria',
-			type: 'Website and CMS',
-			image: codeImg,
-			link: 'https://github.com/facebook/create-react-app/issues/',
+			title: 'Stunited',
+			type: 'API design & management',
+			image: numaxScreenshot,
+			link: 'https://www.stunitedapp.com',
 			description:
-				'A nice CMS System to allow the company manage their properties and receive messages from prospects.',
-			skills: ['Laravel 4.5', 'AngularJS', 'JQuery', 'Bower', 'SASS'],
+				'Manage and improvement to a PHP API. Working remotely with a team of engineers in the US, several functions were created to be consumed by mobile apps.',
+			skills: ['Laravel 5', 'PHP', 'API Design'],
 		},
 		{
-			title: 'Nahil Alianza Inmobiliaria',
-			type: 'Website and CMS',
-			image: codeImg,
-			link: 'https://github.com/facebook/create-react-app/issues/',
+			title: 'Numax',
+			type: 'Webapp development',
+			image: stunitedScreenshot,
+			link: 'numax.mx',
 			description:
-				'A nice CMS System to allow the company manage their properties and receive messages from prospects.',
+				'I sold, designed, managed and participated as the lead developer for this project when I was working in Ggamma. Webapp to compute the taxes needed to pay when selling or buying properties.',
 			skills: ['Laravel 4.5', 'AngularJS', 'JQuery', 'Bower', 'SASS'],
 		},
 	];
@@ -68,6 +70,12 @@ const ProjectsSection = () => {
 							<Grid item sm={6} xs={12}>
 								<Typography variant='h5' variantMapping={{ h5: 'h2' }}>
 									{project.title}
+								</Typography>
+								<Typography
+									variant='subtitle1'
+									variantMapping={{ subtitle1: 'h3' }}
+								>
+									<strong>{project.type}</strong>
 								</Typography>
 								<Typography variant='body2'>{project.description}</Typography>
 								<ul>

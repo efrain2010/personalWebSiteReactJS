@@ -34,13 +34,9 @@ const WorkedSection = () => {
 			title: 'Web Developer',
 			dates: 'Apr 2018 - Sep 2019',
 			tasks: [
-				'Design and implementation of WordPress blogs, as well as webpages dedicated to real estate and tourism.',
-				'Creation of a webpage for a digital marketing agency using Laravel 5.',
-				'Information system created in Laravel 4 for a Real Estate company.',
-				'Maintenance and development of functions for an API in PHP for an education-based project aimed at students in the USA.',
-				'Consultant for a digital platform used to improve the business process of a real estate company.',
-				'Consultant and mentor in SEO and creation of webpages in WordPress for a digital marketing agency.',
-				'Virtual classes and in-person mentoring for basic programming and webpage creation.',
+				'Designed, sold and created websites for clients in different business areas. Consultor in web development and online tutor for web development.',
+				"To build websites, CMS and web apps, I've worked with technologies like WordPress, Laravel, JavaScript, Python, Webpack and AngularJS.",
+				'Worked with teams of engineers in the US, and given remote support to clients.',
 			],
 		},
 		{
@@ -50,11 +46,10 @@ const WorkedSection = () => {
 			title: 'Administration Manager',
 			dates: 'Apr 2013 - Apr 2018',
 			tasks: [
-				'From being a programming apprentice, I quickly learned and escalated in the company successfully developing web pages and information systems using technologies like PHP, Laravel, C#, Javascript and AngularJS; working in teams and independently.',
-				'Responsible for creating scopes, timetables, projects, as well as selling these. I was successful in closing approximately nine projects, one of which was with a Canadian company. By standardizing the project documentation, I helped lower the prospection time and achieved a higher selling rate. Thanks to this experience, I helped the company win two project funds in a Mexican innovation stimulus program.',
-				'I had the role of project manager for four projects, three related to software, and one to graphic design.',
-				'As a business management assistant, I concreted two strategic alliances with other companies to build SaaS projects. I was also responsible for the company when the owner was on leave.',
-				'I had a key role in the company’s MoProSoft certification as a Resource Manager. Administrating the assets and employees as the norm dictates and presenting the evidence to the evaluator.',
+				'Started as a web developer apprentice and escalated to company management assistant.',
+				'As a small company, I had to switch between different roles as needed, giving me the experience in various areas like sales, project estimation, project management, web development and business management.',
+				'As a web developer, I built several web pages and web apps using Laravel, JQuery, AngularJS and JavaScript.',
+				'Among my achievements, I was able to concrete strategic alliances to build SaaS projects, help to obtain the Moprosoft level 2 certification, and help in winning two government funds for software innovation.',
 			],
 		},
 	]);

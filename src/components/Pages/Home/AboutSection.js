@@ -41,9 +41,9 @@ const AboutSection = () => {
 			>
 				<Grid item sm={6} xs={12}>
 					<Typography variant='body1' variantMapping={{ body1: 'p' }}>
-						I'm a <strong>Fullstack Web Developer</strong> based in Scotland
-						with six years of professional experience. I'm interested in
-						different kinds of projects like mobile, desktop and game
+						I'm a <strong>Fullstack Web Developer</strong> currently based in
+						Scotland with six years of professional experience. I'm interested
+						in different kinds of projects like mobile, desktop and game
 						development, but mainly web development.
 						<br />
 						<br />
@@ -79,8 +79,8 @@ const AboutSection = () => {
 								University of Glasgow
 							</a>
 						</strong>{' '}
-						. I am now looking for an opportunity to work in a great company
-						that helps me to skyrocket my career.
+						. I am now looking for an opportunity to work in a recognised
+						company to skyrocket my career.
 					</Typography>
 
 					<br />
