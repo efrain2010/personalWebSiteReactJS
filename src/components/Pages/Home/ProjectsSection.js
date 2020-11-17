@@ -1,6 +1,7 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 
+import withWidth, { isWidthDown } from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
@@ -12,7 +13,7 @@ import nahilScreenshot from '../../../assets/images/nahil-screenshot.png';
 import numaxScreenshot from '../../../assets/images/numax-screenshot.png';
 import stunitedScreenshot from '../../../assets/images/stunited-screenshot.png';
 
-const ProjectsSection = () => {
+const ProjectsSection = (props) => {
 	const classes = useStyles();
 
 	const projectsList = [
@@ -62,6 +63,25 @@ const ProjectsSection = () => {
 				{projectsList.map((project, index) => (
 					<Grid className='content' key={`projects-list-${index}`} item xs={12}>
 						<Grid className='inner-content' container spacing={4}>
+							{isWidthDown('xs', props.width) && (
+								<Grid item xs={12}>
+									<Typography variant='h5' variantMapping={{ h5: 'h2' }}>
+										<a
+											href={project.link}
+											target='_blank'
+											rel='noopener noreferrer'
+										>
+											{project.title}
+										</a>
+									</Typography>
+									<Typography
+										variant='subtitle1'
+										variantMapping={{ subtitle1: 'h3' }}
+									>
+										<strong>{project.type}</strong>
+									</Typography>
+								</Grid>
+							)}
 							<Grid item sm={6} xs={12}>
 								<a
 									href={project.link}
@@ -74,21 +94,25 @@ const ProjectsSection = () => {
 								</a>
 							</Grid>
 							<Grid item sm={6} xs={12}>
-								<Typography variant='h5' variantMapping={{ h5: 'h2' }}>
-									<a
-										href={project.link}
-										target='_blank'
-										rel='noopener noreferrer'
-									>
-										{project.title}
-									</a>
-								</Typography>
-								<Typography
-									variant='subtitle1'
-									variantMapping={{ subtitle1: 'h3' }}
-								>
-									<strong>{project.type}</strong>
-								</Typography>
+								{!isWidthDown('xs', props.width) && (
+									<>
+										<Typography variant='h5' variantMapping={{ h5: 'h2' }}>
+											<a
+												href={project.link}
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												{project.title}
+											</a>
+										</Typography>
+										<Typography
+											variant='subtitle1'
+											variantMapping={{ subtitle1: 'h3' }}
+										>
+											<strong>{project.type}</strong>
+										</Typography>
+									</>
+								)}
 								<Typography variant='body2'>{project.description}</Typography>
 								<ul>
 									{project.skills.map((skill, index) => (
@@ -104,4 +128,4 @@ const ProjectsSection = () => {
 	);
 };
 
-export default ProjectsSection;
+export default withWidth()(ProjectsSection);

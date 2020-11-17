@@ -25,13 +25,16 @@ const useStyles = makeStyles((theme) => ({
 				padding: '15% 0',
 			},
 			'& h1': {
-				fontSize: '2rem',
+				fontSize: '3rem',
 			},
 			'& h2': {
-				fontSize: '1.8rem',
+				fontSize: '2.2rem',
 			},
-			'& p': {
-				fontSize: '1rem',
+			'& p:last-of-type': {
+				fontSize: '1.2rem',
+			},
+			'& a': {
+				// marginTop: theme.spacing(1),
 			},
 		},
 	},
@@ -81,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
 				width: '100%',
 				'&::after': {
 					backgroundColor: `${theme.palette.secondary.main}`,
+					borderRadius: '50%',
 					bottom: 0,
 					content: '""',
 					display: 'block',

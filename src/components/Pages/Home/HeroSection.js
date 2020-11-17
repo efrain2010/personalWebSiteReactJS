@@ -23,7 +23,7 @@ const HeroSection = () => {
 						<br />
 						Web Developer
 					</Typography>
-					<Grid item xs={8}>
+					<Grid item sm={8} xs={12}>
 						<Typography variant='h5' gutterBottom={true} paragraph={true}>
 							I'm a software developer currently based in Glasgow, Scotland
 							specialized in creating astonishing webpages and webapps.
