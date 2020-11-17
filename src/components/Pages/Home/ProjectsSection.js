@@ -20,7 +20,7 @@ const ProjectsSection = () => {
 			title: 'Nahil Alianza Inmobiliaria',
 			type: 'Website and CMS',
 			image: nahilScreenshot,
-			link: 'nahilrentasyventas.com',
+			link: 'https://nahilrentasyventas.com',
 			description:
 				'A CMS System to allow a real estate company to manage their properties and receive messages from prospects.',
 			skills: ['Laravel 4.5', 'AngularJS', 'JQuery', 'Bower', 'SASS'],
@@ -38,7 +38,7 @@ const ProjectsSection = () => {
 			title: 'Numax',
 			type: 'Webapp development',
 			image: stunitedScreenshot,
-			link: 'numax.mx',
+			link: 'https://numax.mx',
 			description:
 				'I sold, designed, managed and participated as the lead developer for this project when I was working in Ggamma. Webapp to compute the taxes needed to pay when selling or buying properties.',
 			skills: ['Laravel 4.5', 'AngularJS', 'JQuery', 'Bower', 'SASS'],
@@ -63,13 +63,25 @@ const ProjectsSection = () => {
 					<Grid className='content' key={`projects-list-${index}`} item xs={12}>
 						<Grid className='inner-content' container spacing={4}>
 							<Grid item sm={6} xs={12}>
-								<figure>
-									<img src={project.image} alt='project screenshot' />
-								</figure>
+								<a
+									href={project.link}
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<figure>
+										<img src={project.image} alt='project screenshot' />
+									</figure>
+								</a>
 							</Grid>
 							<Grid item sm={6} xs={12}>
 								<Typography variant='h5' variantMapping={{ h5: 'h2' }}>
-									{project.title}
+									<a
+										href={project.link}
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										{project.title}
+									</a>
 								</Typography>
 								<Typography
 									variant='subtitle1'
