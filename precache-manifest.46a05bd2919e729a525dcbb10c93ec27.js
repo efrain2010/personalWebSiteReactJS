@@ -1,27 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "49ee2a12b5bf9d7c86723c6cfafba470",
+    "revision": "e17804842030c9d8e1b85196c6f7ee7a",
     "url": "/personalWebSiteReactJS/index.html"
   },
   {
-    "revision": "667a8319b0b273bc6c9d",
-    "url": "/personalWebSiteReactJS/static/js/2.4ffce34c.chunk.js"
+    "revision": "03af17b72ebaf22bb81d",
+    "url": "/personalWebSiteReactJS/static/js/2.009f65c1.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/personalWebSiteReactJS/static/js/2.4ffce34c.chunk.js.LICENSE.txt"
+    "url": "/personalWebSiteReactJS/static/js/2.009f65c1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "23ed6771712ca6c6d892",
-    "url": "/personalWebSiteReactJS/static/js/main.79a42639.chunk.js"
+    "revision": "097b8a222d47df620bdf",
+    "url": "/personalWebSiteReactJS/static/js/main.e2963b39.chunk.js"
   },
   {
     "revision": "3d38d20f52eaff0548f8",
     "url": "/personalWebSiteReactJS/static/js/runtime-main.5f389ec5.js"
-  },
-  {
-    "revision": "80bc5fcb0136a2e0f828242d68760609",
-    "url": "/personalWebSiteReactJS/static/media/code-background.80bc5fcb.jpg"
   },
   {
     "revision": "e314f026463a5d807fc007db7f4aa2d9",
