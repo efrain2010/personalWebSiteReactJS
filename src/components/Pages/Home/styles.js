@@ -33,9 +33,6 @@ const useStyles = makeStyles((theme) => ({
 			'& p:last-of-type': {
 				fontSize: '1.2rem',
 			},
-			'& a': {
-				// marginTop: theme.spacing(1),
-			},
 		},
 	},
 	aboutMe: {
@@ -184,10 +181,12 @@ const useStyles = makeStyles((theme) => ({
 	projects: {
 		'& .content': {
 			paddingBottom: theme.spacing(3),
+			'& h2': {
+				marginTop: -7,
+			},
 			'& figure': {
 				margin: 0,
 				position: 'relative',
-				'& img': {},
 				'&::before': {
 					content: '""',
 					height: '100%',
@@ -207,6 +206,14 @@ const useStyles = makeStyles((theme) => ({
 					'&:last-child': {
 						marginRight: 0,
 					},
+				},
+			},
+		},
+		[theme.breakpoints.down('xs')]: {
+			'& .inner-content': {
+				paddingBottom: theme.spacing(2),
+				'& > div': {
+					paddingTop: 0,
 				},
 			},
 		},

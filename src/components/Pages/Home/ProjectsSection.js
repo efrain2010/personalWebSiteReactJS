@@ -29,7 +29,7 @@ const ProjectsSection = (props) => {
 		{
 			title: 'Stunited',
 			type: 'API design & management',
-			image: numaxScreenshot,
+			image: stunitedScreenshot,
 			link: 'https://www.stunitedapp.com',
 			description:
 				'Manage and improvement to a PHP API. Working remotely with a team of engineers in the US, several functions were created to be consumed by mobile apps.',
@@ -38,8 +38,8 @@ const ProjectsSection = (props) => {
 		{
 			title: 'Numax',
 			type: 'Webapp development',
-			image: stunitedScreenshot,
 			link: 'https://numax.mx',
+			image: numaxScreenshot,
 			description:
 				'I sold, designed, managed and participated as the lead developer for this project when I was working in Ggamma. Webapp to compute the taxes needed to pay when selling or buying properties.',
 			skills: ['Laravel 4.5', 'AngularJS', 'JQuery', 'Bower', 'SASS'],
