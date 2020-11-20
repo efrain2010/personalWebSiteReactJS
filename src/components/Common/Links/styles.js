@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
 			padding: theme.spacing(),
 		},
 		'& a': {
+			cursor: 'pointer',
 			fontSize: 14,
 			fontWeight: 'bold',
 		},
