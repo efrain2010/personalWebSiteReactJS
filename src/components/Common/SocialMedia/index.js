@@ -2,7 +2,7 @@ import React from 'react';
 
 import IconButton from '@material-ui/core/IconButton';
 
-import { email, socialMedia } from '../../../constants';
+import { email, socialMedia } from '../../../constants/socials';
 
 import useStyles from './styles';
 
@@ -16,8 +16,7 @@ const SocialMedia = () => {
 					return (
 						<li key={`media-${index}`}>
 							<IconButton {...media.props}>
-								{/* eslint-disable-next-line react/jsx-no-target-blank */}
-								<a href={media.link} target='_blank' {...media.props}>
+								<a href={media.link} {...media.props}>
 									{media.icon}
 								</a>
 							</IconButton>
