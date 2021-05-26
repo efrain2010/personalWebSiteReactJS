@@ -1,5 +1,8 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+import { Link as Anchor } from 'react-scroll';
+import {
+  Link
+} from "react-router-dom";
 import withWidth, { isWidthDown } from '@material-ui/core/withWidth';
 
 import IconButton from '@material-ui/core/IconButton';
@@ -13,6 +16,12 @@ const Links = (props) => {
 	const menuBehaviour = props.opened ? 'open' : '';
 
 	const linksData = [
+		{
+			props: {
+				link: '/blog'
+			},
+			title: 'Blog'
+		},
 		{
 			props: {
 				containerId: 'homeAboutSection',
@@ -55,16 +64,21 @@ const Links = (props) => {
 					) : null}
 					{linksData.map((link, index) => (
 						<li key={`header-links-${index}`}>
-							<Link
-								activeClass='active'
-								duration={500}
-								onClick={() => props.behaviourHandler(false)}
-								smooth={true}
-								spy={true}
-								to={link.props.containerId}
-							>
-								{link.title}
-							</Link>
+							{
+								link.props.containerId ?
+									<Anchor
+										activeClass='active'
+										duration={500}
+										onClick={() => props.behaviourHandler(false)}
+										smooth={true}
+										spy={true}
+										to={link.props.containerId}
+									>
+										{link.title}
+									</Anchor>
+									:
+									<Link to={link.props.link}>{link.title}</Link>
+							}
 						</li>
 					))}
 				</ul>

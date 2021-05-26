@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
+import {Container, Grid} from '@material-ui/core';
 
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
@@ -13,15 +13,19 @@ const Home = () => {
 	const classes = useStyles();
 
 	return (
-		<React.Fragment>
-			<Container className={classes.root} maxWidth='md'>
-				<HeroSection />
-				<AboutSection />
-				<WorkedSection />
-				<ProjectsSection />
-				<ContactSection />
-			</Container>
-		</React.Fragment>
+		<>
+			<Grid container justify='center'>
+				<Grid item sm={10} xs={11}>			
+					<Container className={classes.root} maxWidth='md'>
+						<HeroSection />
+						<AboutSection />
+						<WorkedSection />
+						<ProjectsSection />
+						<ContactSection />
+					</Container>
+				</Grid>
+			</Grid>
+		</>
 	);
 };
 
