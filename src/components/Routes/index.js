@@ -3,6 +3,7 @@ import { Route } from 'react-router';
 
 import Home from '../Pages/Home';
 import Blog from '../Pages/Blog';
+import Post from '../Pages/Post';
 
 class Routes extends Component {
 	render() {
@@ -10,6 +11,7 @@ class Routes extends Component {
 			<React.Fragment>
 				<Route path='/' exact component={Home} />
 				<Route path='/blog' exact component={Blog} />
+				<Route path='/blog/:slug' component={Post} />
 			</React.Fragment>
 		);
 	}

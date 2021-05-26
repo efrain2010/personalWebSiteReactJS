@@ -18,11 +18,9 @@ const Links = (props) => {
 	const linksData = [
 		{
 			props: {
-				props: {
-					link: '/blog'
-				},
-				title: 'Blog'
-			}
+				link: '/blog'
+			},
+			title: 'Blog'
 		},
 		{
 			props: {
